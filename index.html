@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio — Frontend / Fullstack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+
+<div id="orb"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+<a class="nav-logo" href="#hero">
+    <span>&lt;/&gt;</span> Khanh.dev
+</a>
+  <ul class="nav-links">
+    <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+    <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+    <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+    <li><a href="#contact" class="nav-cta" data-i18n="nav.hire">Hire Me</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('vi')">VI</button>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#skills" onclick="closeMobile()" data-i18n="nav.skills">Skills</a>
+  <a href="#experience" onclick="closeMobile()" data-i18n="nav.experience">Experience</a>
+  <a href="#projects" onclick="closeMobile()" data-i18n="nav.projects">Projects</a>
+  <a href="#more" onclick="closeMobile()" data-i18n="nav.certs">Certifications</a>
+  <a href="#contact" onclick="closeMobile()" style="color:var(--accent)" data-i18n="nav.hire_arrow">Hire Me →</a>
+  <div class="mobile-lang">
+    <button class="lang-btn active" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('vi')">VI</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          <span data-i18n="hero.available">Available for opportunities</span>
+        </div>
+        <h1 class="hero-name">
+          <span data-i18n="hero.title1">Frontend &</span><br>
+          <span class="accent">Fullstack</span><br>
+          <span data-i18n="hero.title2">Developer</span>
+        </h1>
+        <p class="hero-title">
+          <span id="typewriter"></span><span class="cursor"></span>
+        </p>
+        <p class="hero-desc" data-i18n="hero.desc">
+          5+ years crafting high-performance web & mobile experiences.
+          Specialized in Angular, React, and Python — from pixel-perfect UIs to robust backend integrations.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">
+            <span data-i18n="hero.cta1">View My Work</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contact" class="btn-secondary" data-i18n="hero.cta2">Get In Touch</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item"><div class="stat-number">5+</div><div class="stat-label" data-i18n="hero.stat1">Years Exp.</div></div>
+          <div class="stat-item"><div class="stat-number">10+</div><div class="stat-label" data-i18n="hero.stat2">Projects</div></div>
+          <div class="stat-item"><div class="stat-number">3+</div><div class="stat-label" data-i18n="hero.stat3">Companies</div></div>
+          <div class="stat-item"><div class="stat-number">B2</div><div class="stat-label" data-i18n="hero.stat4">English</div></div>
+          <div class="stat-item"><div class="stat-number">N4</div><div class="stat-label" data-i18n="hero.stat5">Japanese</div></div>
+        </div>
+      </div>
+      <div class="hero-avatar-card">
+        <div class="avatar-bg">
+          <img src="./assets/img/avatar.jpg" alt="avatar" class="avatar-img"/>
+          <div class="avatar-name-label" data-i18n="hero.avatar_role">Frontend Developer</div>
+          <div class="avatar-role-label" data-i18n="hero.avatar_loc">Ha Noi City, Vietnam</div>
+          <div class="avatar-badges">
+            <span class="badge">Angular</span><span class="badge">React</span>
+            <span class="badge">Python</span><span class="badge">TypeScript</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag" data-i18n="skills.tag">What I Do</div>
+      <h2 class="section-title-main" data-i18n="skills.title">Technical Skills</h2>
+      <p class="section-subtitle" data-i18n="skills.sub">A focused stack built through years of real-world delivery.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal"><div class="skill-header"><div class="skill-name"><span class="skill-icon">🅰️</span> Angular</div><span class="skill-pct">95%</span></div><div class="skill-track"><div class="skill-fill" data-width="95"></div></div></div>
+      <div class="skill-card reveal"><div class="skill-header"><div class="skill-name"><span class="skill-icon">⚛️</span> React / React Native</div><span class="skill-pct">90%</span></div><div class="skill-track"><div class="skill-fill" data-width="90"></div></div></div>
+      <div class="skill-card reveal">
+        <div class="skill-header">
+            <div class="skill-name">
+                <span class="skill-icon">🟢</span> <span data-i18n="skill.node"></span>
+            </div>
+            <span class="skill-pct">85%</span>
+        </div>
+        <div class="skill-track">
+            <div class="skill-fill" data-width="85"></div>
+        </div>
+      </div>
+      <div class="skill-card reveal"><div class="skill-header"><div class="skill-name"><span class="skill-icon">💛</span> JavaScript / TypeScript</div><span class="skill-pct">95%</span></div><div class="skill-track"><div class="skill-fill" data-width="95"></div></div></div>
+      <div class="skill-card reveal"><div class="skill-header"><div class="skill-name"><span class="skill-icon">🎨</span> HTML / CSS / UI</div><span class="skill-pct">95%</span></div><div class="skill-track"><div class="skill-fill" data-width="95"></div></div></div>
+      <div class="skill-card reveal"><div class="skill-header"><div class="skill-name"><span class="skill-icon">🐍</span> Python</div><span class="skill-pct">80%</span></div><div class="skill-track"><div class="skill-fill" data-width="80"></div></div></div>
+      <div class="skill-card reveal"><div class="skill-header"><div class="skill-name"><span class="skill-icon">🗄️</span> SQL / Microservices</div><span class="skill-pct">75%</span></div><div class="skill-track"><div class="skill-fill" data-width="75"></div></div></div>
+      <div class="skill-card reveal"><div class="skill-header"><div class="skill-name"><span class="skill-icon">🖌️</span> UI/UX / Figma</div><span class="skill-pct">85%</span></div><div class="skill-track"><div class="skill-fill" data-width="85"></div></div></div>
+    </div>
+    <div class="skill-cats reveal" style="transition-delay:0.2s">
+      <div class="skill-cat-card"><span class="skill-cat-icon">🤖</span><div><div class="skill-cat-label" data-i18n="skills.cat1">AI Integration</div><div class="skill-cat-sub">LLM · Chatbot · Automation</div></div></div>
+      <div class="skill-cat-card"><span class="skill-cat-icon">📱</span><div><div class="skill-cat-label" data-i18n="skills.cat2">Mobile Dev</div><div class="skill-cat-sub">React Native · Cross-platform</div></div></div>
+      <div class="skill-cat-card"><span class="skill-cat-icon">🔗</span><div><div class="skill-cat-label" data-i18n="skills.cat3">API & CMS</div><div class="skill-cat-sub">REST · Third-party · Migration</div></div></div>
+      <div class="skill-cat-card"><span class="skill-cat-icon">🚀</span><div><div class="skill-cat-label" data-i18n="skills.cat4">Code Review</div><div class="skill-cat-sub">QA · BA Collaboration</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag" data-i18n="exp.tag">Where I've Been</div>
+      <h2 class="section-title-main" data-i18n="exp.title">Work Experience</h2>
+      <p class="section-subtitle" data-i18n="exp.sub">Building production software across fintech, aviation, and healthcare.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="exp-card">
+          <div class="exp-meta">
+            <div class="exp-role"><span data-i18n="exp1.role">Frontend Developer</span> <span class="tag-latest" data-i18n="exp.current">Current</span></div>
+            <span class="exp-period">Jun 2025 — Jun 2026</span>
+          </div>
+          <div class="exp-company">SmartOSC — Cebu Pacific Air (Philippines)</div>
+          <ul class="exp-list">
+            <li data-i18n="exp1.b1">Enterprise Angular development + CMS platform migration</li>
+            <li data-i18n="exp1.b2">Integration with third-party payment and booking APIs</li>
+            <li data-i18n="exp1.b3">Cross-functional collaboration with QA, BA, and design teams</li>
+            <li data-i18n="exp1.b4">Code review ownership and feature delivery for international client</li>
+          </ul>
+        </div>
+      </div>
+    <div class="timeline-item">
+        <div class="timeline-dot"></div>
+
+        <div class="exp-card">
+            <div class="exp-meta">
+            <div class="exp-role" data-i18n="exp5.role"></div>
+            <span class="exp-period">2025 — Present</span>
+            </div>
+
+            <div class="exp-company" data-i18n="exp5.company"></div>
+
+            <ul class="exp-list">
+            <li data-i18n="exp5.b1"></li>
+            <li data-i18n="exp5.b2"></li>
+            <li data-i18n="exp5.b3"></li>
+            <li data-i18n="exp5.b4"></li>
+            </ul>
+        </div>
+    </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="exp-card">
+            <div class="exp-meta">
+            <div class="exp-role" data-i18n="exp4.role">Frontend Developer</div>
+            <span class="exp-period">Jan 2024 — Jan 2025</span>
+            </div>
+            <div class="exp-company">Techcombank Dev</div>
+            <ul class="exp-list">
+            <li data-i18n="exp4.b1"></li>
+            <li data-i18n="exp4.b2"></li>
+            <li data-i18n="exp4.b3"></li>
+            <li data-i18n="exp4.b4"></li>
+            </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="exp-card">
+          <div class="exp-meta">
+            <div class="exp-role" data-i18n="exp2.role">Frontend Developer</div>
+            <span class="exp-period">Jan 2021 — Jan 2023</span>
+          </div>
+          <div class="exp-company">Aratech</div>
+          <ul class="exp-list">
+            <li data-i18n="exp2.b1">Angular / AngularJS development for enterprise contracts</li>
+            <li data-i18n="exp2.b2">Hospital LIS system and Viettel contract management platform</li>
+            <li data-i18n="exp2.b3">UI optimization, responsive design, and performance tuning</li>
+            <li data-i18n="exp2.b4">Direct client-facing requirements gathering and implementation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="exp-card">
+          <div class="exp-meta">
+            <div class="exp-role" data-i18n="exp3.role">Freelance Fullstack Developer</div>
+            <span class="exp-period">2021 — Present</span>
+          </div>
+          <div class="exp-company" data-i18n="exp3.company">Independent</div>
+          <ul class="exp-list">
+            <li data-i18n="exp3.b1">Fullstack development: Angular frontend + Python backend</li>
+            <li data-i18n="exp3.b2">AI/LLM integration projects for business automation</li>
+            <li data-i18n="exp3.b3">Meta ecosystem integrations (Facebook & TikTok APIs)</li>
+            <li data-i18n="exp3.b4">Japanese learning mobile app built with React Native</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag" data-i18n="proj.tag">What I've Built</div>
+      <h2 class="section-title-main" data-i18n="proj.title">Featured Projects</h2>
+      <p class="section-subtitle" data-i18n="proj.sub">Production systems across aviation, healthcare, telecoms, and education.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-num">01</div>
+        <div class="project-title" data-i18n="p1.title">Cebu Pacific Air</div>
+        <div class="project-desc" data-i18n="p1.desc">Enterprise booking and CMS platform for one of Southeast Asia's largest low-cost airlines. Angular-first, third-party API heavy, international team.</div>
+        <div class="project-stack"><span class="project-tag">Angular</span><span class="project-tag">CMS</span><span class="project-tag">REST API</span></div>
+        <a href="https://cebupacificair.com/" target="_blank" style="text-decoration: none;">
+            <div class="project-arrow">→</div>
+        </a>
+      </div>
+      <div class="project-card">
+        <div class="project-num">02</div>
+        <div class="project-title" data-i18n="p2.title">Hospital LIS System</div>
+        <div class="project-desc" data-i18n="p2.desc">Laboratory information system for hospital operations — complex data workflows, role-based access, and real-time lab result management.</div>
+        <div class="project-stack"><span class="project-tag">Angular</span><span class="project-tag">C# REST API</span><span class="project-tag">SQL</span></div>
+        <a href="https://aratech.vn/" target="_blank" style="text-decoration: none;">
+            <div class="project-arrow">→</div>
+        </a>
+      </div>
+      <div class="project-card">
+        <div class="project-num">03</div>
+        <div class="project-title" data-i18n="p3.title">Viettel Contract Manager</div>
+        <div class="project-desc" data-i18n="p3.desc">Internal contract lifecycle management system for Vietnam's largest telecom company. Built from requirements, shipped to production.</div>
+        <div class="project-stack"><span class="project-tag">Angular</span><span class="project-tag">Microservices</span></div>
+        <a href="https://vcontract.viettel.vn/bccs/enterprise-login" target="_blank" style="text-decoration: none;">
+            <div class="project-arrow">→</div>
+        </a>
+      </div>
+      <div class="project-card">
+        <div class="project-num">04</div>
+        <div class="project-title" data-i18n="p4.title">Japanese Learning App</div>
+        <div class="project-desc" data-i18n="p4.desc">Cross-platform mobile language learning app with spaced repetition, kanji drills, and progress tracking. Full freelance end-to-end delivery.</div>
+        <div class="project-stack"><span class="project-tag">React Native</span><span class="project-tag">Python</span></div>
+        <div class="project-arrow">→</div>
+      </div>
+      <div class="project-card">
+        <div class="project-num">05</div>
+        <div class="project-title" data-i18n="p5.title">Meta Ads Integration</div>
+        <div class="project-desc" data-i18n="p5.desc">Business automation platform integrating Facebook and TikTok APIs for ad campaign management, analytics, and lead generation pipelines.</div>
+        <div class="project-stack"><span class="project-tag">Angular</span><span class="project-tag">Python</span><span class="project-tag">Meta API</span></div>
+        <div class="project-arrow">→</div>
+      </div>
+      <div class="project-card">
+        <div class="project-num">06</div>
+        <div class="project-title" data-i18n="p6.title">AI Integration Projects</div>
+        <div class="project-desc" data-i18n="p6.desc">Multiple client projects integrating LLMs and AI automation into web apps — from intelligent chatbots to document processing pipelines.</div>
+        <div class="project-stack"><span class="project-tag">Python</span><span class="project-tag">LLM</span><span class="project-tag">Angular</span></div>
+        <a href="https://github.com/uncleyellow/tools_ai_ratraco" target="_blank" style="text-decoration: none;">
+            <div class="project-arrow">→</div>
+        </a>
+      </div>
+    <div class="project-card">
+        <div class="project-num">07</div>
+        <div class="project-title">
+            Driving School Management System
+        </div>
+        <div class="project-desc">
+            Fullstack platform for managing driving school training: student management, lessons, internal exams, and learning progress tracking with role-based access (Admin / Student / Guest).
+        </div>
+        <div class="project-stack">
+            <span class="project-tag">Angular</span>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">REST API</span>
+            <span class="project-tag">Fullstack</span>
+            <span class="project-tag">Node.js / Backend</span>
+        </div>
+
+        <a href="https://hoclaixe-hieukhanh.vercel.app/" target="_blank" class="project-arrow-link" style="text-decoration: none;">
+            <div class="project-arrow">→</div>
+        </a>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- GITHUB -->
+<section id="github">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Open Source</div>
+      <h2 class="section-title-main">My GitHub Projects</h2>
+      <p class="section-subtitle">Real code from my repositories</p>
+    </div>
+
+    <div class="projects-grid" id="githubRepos">
+      <!-- JS render here -->
+    </div>
+  </div>
+</section>
+
+<!-- MORE -->
+<section id="more">
+  <div class="container">
+    <div class="more-grid">
+      <div class="reveal">
+        <div class="section-header" style="margin-bottom:28px">
+          <div class="section-tag" data-i18n="cert.tag">Credentials</div>
+          <h2 class="section-title-main" style="font-size:28px" data-i18n="cert.title">Certifications</h2>
+        </div>
+        <div class="cert-list">
+          <div class="cert-item">
+            <span class="cert-icon">🌐</span>
+            <div><div class="cert-name">IELTS ~6.5 (B2)</div><div class="cert-year" data-i18n="cert1.sub">2023 · Professional working proficiency</div></div>
+          </div>
+          <div class="cert-item">
+            <span class="cert-icon">🇯🇵</span>
+            <div><div class="cert-name">JLPT N5</div><div class="cert-year" data-i18n="cert2.sub">2021 · Japanese Language Proficiency</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="section-header" style="margin-bottom:28px">
+          <div class="section-tag" data-i18n="interest.tag">Beyond Code</div>
+          <h2 class="section-title-main" style="font-size:28px" data-i18n="interest.title">Interests</h2>
+        </div>
+        <div class="interest-grid">
+          <div class="interest-card"><span class="interest-emoji">🏀</span><div class="interest-label" data-i18n="int1">Basketball</div></div>
+          <div class="interest-card"><span class="interest-emoji">🎸</span><div class="interest-label" data-i18n="int2">Guitar</div></div>
+          <div class="interest-card"><span class="interest-emoji">🎮</span><div class="interest-label" data-i18n="int3">Gaming</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-glow reveal">
+        <div class="contact-label" data-i18n="contact.label">Let's Work Together</div>
+        <h2 class="contact-heading" data-i18n="contact.heading">Ready to build something great?</h2>
+        <p class="contact-sub" data-i18n="contact.sub">Open to full-time roles, contracts, and interesting freelance projects. Let's talk.</p>
+        <a href="mailto:kiniemboquenjerry@gmail.com" class="contact-email">📬 kiniemboquenjerry@gmail.com</a>
+        <div class="social-links"> 
+          <a href="https://github.com/uncleyellow" target="_blank" class="social-link" title="GitHub">
+          💻
+          </a>
+          <a href="#" class="social-link" title="LinkedIn">💼</a>
+          <a href="#" class="social-link" title="Twitter / X">🐦</a>
+          <a href="#" class="social-link" title="CV Download">📄</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>©<span id="year"></span> Dương Đình Khánh </span>
+  <span data-i18n="footer.built">Built with <span style="color:#ef4444">♥</span> — No frameworks, pure craft</span>
+</footer>
+<script src="./main.js"></script>
+</body>
+</html>

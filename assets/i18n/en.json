@@ -1,0 +1,107 @@
+{
+  "nav.skills": "Skills",
+  "nav.experience": "Experience",
+  "nav.projects": "Projects",
+  "nav.hire": "Hire Me",
+  "nav.certs": "Certifications",
+  "nav.hire_arrow": "Hire Me →",
+
+  "hero.available": "Available for opportunities",
+  "hero.title1": "Frontend &",
+  "hero.title2": "Developer",
+  "hero.desc": "5+ years crafting high-performance web & mobile experiences. Specialized in Angular, React, and Python — from pixel-perfect UIs to robust backend integrations.",
+  "hero.cta1": "View My Work",
+  "hero.cta2": "Get In Touch",
+
+  "hero.stat1": "Years Exp.",
+  "hero.stat2": "Projects",
+  "hero.stat3": "Companies",
+  "hero.stat4": "English",
+  "hero.stat5": "Japanese",
+
+  "hero.avatar_role": "Frontend Developer",
+  "hero.avatar_loc": "Ha Noi City, Vietnam",
+
+  "skills.tag": "What I Do",
+  "skills.title": "Technical Skills",
+  "skills.sub": "A focused stack built through years of real-world delivery.",
+
+  "skills.cat1": "AI Integration",
+  "skills.cat2": "Mobile Dev",
+  "skills.cat3": "API & CMS",
+  "skills.cat4": "Code Review",
+  "skill.node": "Node.js / Backend",
+  "exp.tag": "Where I've Been",
+  "exp.title": "Work Experience",
+  "exp.sub": "Building production software across fintech, aviation, and healthcare.",
+  "exp.current": "Current",
+
+  "exp1.role": "Frontend Developer",
+  "exp1.b1": "Enterprise Angular development + CMS platform migration",
+  "exp1.b2": "Integration with third-party payment and booking APIs",
+  "exp1.b3": "Cross-functional collaboration with QA, BA, and design teams",
+  "exp1.b4": "Code review ownership and feature delivery for international client",
+
+  "exp2.role": "Frontend Developer",
+  "exp2.b1": "Angular / AngularJS development for enterprise contracts",
+  "exp2.b2": "Hospital LIS system and Viettel contract management platform",
+  "exp2.b3": "UI optimization, responsive design, and performance tuning",
+  "exp2.b4": "Direct client-facing requirements gathering and implementation",
+
+  "exp3.role": "Freelance Fullstack Developer",
+  "exp3.company": "Independent",
+  "exp3.b1": "Fullstack development: Angular frontend + Python backend",
+  "exp3.b2": "AI/LLM integration projects for business automation",
+  "exp3.b3": "Meta ecosystem integrations (Facebook & TikTok APIs)",
+  "exp3.b4": "Japanese learning mobile app built with React Native",
+  
+  "exp4.role": "Frontend Developer",
+  "exp4.b1": "Engineered enterprise-level bidding and contract management systems for internal banking operations",
+  "exp4.b2": "Implemented scalable frontend architecture using Angular and NgRx for efficient state management",
+  "exp4.b3": "Collaborated cross-functionally with backend and QA teams to deliver stable production features",
+  "exp4.b4": "Improved application performance and maintainability through code refactoring and optimization",
+
+  "exp5.role": "Fullstack Developer",
+  "exp5.company": "Personal Project / Client Product",
+  "exp5.b1": "Designed and developed a fullstack driving school management system for real-world operations",
+  "exp5.b2": "Implemented role-based access control (Admin, Student, Guest)",
+  "exp5.b3": "Built learning workflows and internal examination system",
+  "exp5.b4": "Deployed and maintained production system on Vercel with real users",
+
+  "proj.tag": "What I've Built",
+  "proj.title": "Featured Projects",
+  "proj.sub": "Production systems across aviation, healthcare, telecoms, and education.",
+
+  "p1.title": "Cebu Pacific Air",
+  "p2.title": "Hospital LIS System",
+  "p3.title": "Viettel Contract Manager",
+  "p4.title": "Japanese Learning App",
+  "p5.title": "Meta Ads Integration",
+  "p6.title": "AI Integration Projects",
+  "p7.title": "Driving School Management System",
+  "p7.desc": "Fullstack web platform for managing driving school operations including student tracking, lessons, internal exams, and role-based access control for Admin, Student, and Guest users.",
+  "cert.tag": "Credentials",
+  "cert.title": "Certifications",
+  "cert1.sub": "2023 · Professional working proficiency",
+  "cert2.sub": "2021 · Japanese Language Proficiency",
+
+  "interest.tag": "Beyond Code",
+  "interest.title": "Interests",
+  "int1": "Basketball",
+  "int2": "Guitar",
+  "int3": "Gaming",
+
+  "contact.label": "Let's Work Together",
+  "contact.heading": "Ready to build something great?",
+  "contact.sub": "Open to full-time roles, contracts, and interesting freelance projects. Let's talk.",
+
+  "footer.built": "Built with ❤️ — No frameworks, pure craft",
+
+  "tw": [
+    "Angular Specialist",
+    "React / RN Developer",
+    "Fullstack Engineer",
+    "AI Integration Dev",
+    "UI/UX Craftsman"
+  ]
+}
