@@ -7,6 +7,35 @@ let twIndex = 0;
 let twChar = 0;
 let twDeleting = false;
 document.getElementById("year").textContent = new Date().getFullYear();
+
+
+const timelineObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.timeline-item2').forEach(el => {
+  timelineObserver.observe(el);
+});
+const modal = document.getElementById("cvModal");
+const openBtn = document.getElementById("openCV");
+const closeBtn = document.querySelector(".cv-close");
+
+if (openBtn) {
+  openBtn.onclick = () => modal.style.display = "block";
+}
+
+if (closeBtn) {
+  closeBtn.onclick = () => modal.style.display = "none";
+}
+
+globalThis.onclick = (e) => {
+  if (e.target === modal) modal.style.display = "none";
+};
+
 // ── Load language ──
 async function loadLang(lang) {
   try {
@@ -94,6 +123,10 @@ async function loadGithubRepos() {
   } catch (err) {
     console.error("GitHub error", err);
   }
+}
+
+function toggleCase(el) {
+  el.classList.toggle("active");
 }
 
 // ── change language ──

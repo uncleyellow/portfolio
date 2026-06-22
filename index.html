@@ -310,6 +310,116 @@
   </div>
 </section>
 
+<!-- CASE STUDY -->
+<section id="case-study">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="section-tag" data-i18n="case.tag">Process</div>
+      <h2 class="section-title-main" data-i18n="case.title"></h2>
+      <p class="section-subtitle" data-i18n="case.sub"></p>
+    </div>
+
+    <div class="case-grid">
+
+      <!-- ITEM -->
+      <div class="case-item reveal" onclick="toggleCase(this)">
+        <div class="case-header">
+          <div class="case-step">01</div>
+          <div class="case-title" data-i18n="case.ba"></div>
+          <div class="case-toggle">+</div>
+        </div>
+        <div class="case-detail">
+          <p data-i18n="case.ba_desc"></p>
+          <ul>
+            <li>Analyze user stories</li>
+            <li>Break tasks</li>
+            <li>Align backend</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="case-item reveal" onclick="toggleCase(this)">
+        <div class="case-header">
+          <div class="case-step">02</div>
+          <div class="case-title" data-i18n="case.dev"></div>
+          <div class="case-toggle">+</div>
+        </div>
+        <div class="case-detail">
+          <p data-i18n="case.dev_desc"></p>
+          <ul>
+            <li>Reusable components</li>
+            <li>API integration</li>
+            <li>Optimize performance</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="case-item reveal" onclick="toggleCase(this)">
+        <div class="case-header">
+          <div class="case-step">03</div>
+          <div class="case-title" data-i18n="case.test"></div>
+          <div class="case-toggle">+</div>
+        </div>
+        <div class="case-detail">
+          <p data-i18n="case.test_desc"></p>
+        </div>
+      </div>
+
+      <div class="case-item reveal" onclick="toggleCase(this)">
+        <div class="case-header">
+          <div class="case-step">04</div>
+          <div class="case-title" data-i18n="case.pr"></div>
+          <div class="case-toggle">+</div>
+        </div>
+        <div class="case-detail">
+          <p data-i18n="case.pr_desc"></p>
+        </div>
+      </div>
+
+      <div class="case-item reveal" onclick="toggleCase(this)">
+        <div class="case-header">
+          <div class="case-step">05</div>
+          <div class="case-title" data-i18n="case.review"></div>
+          <div class="case-toggle">+</div>
+        </div>
+        <div class="case-detail">
+          <p data-i18n="case.review_desc"></p>
+        </div>
+      </div>
+
+      <div class="case-item reveal" onclick="toggleCase(this)">
+        <div class="case-header">
+          <div class="case-step">06</div>
+          <div class="case-title" data-i18n="case.sonar"></div>
+          <div class="case-toggle">+</div>
+        </div>
+        <div class="case-detail">
+          <p data-i18n="case.sonar_desc"></p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="system-design">
+  <div class="container">
+    <h2>System Architecture</h2>
+
+    <div class="diagram">
+      <div class="box">Frontend (Angular)</div>
+      <div class="arrow">→</div>
+      <div class="box">API</div>
+      <div class="arrow">→</div>
+      <div class="box">Backend (Python)</div>
+      <div class="arrow">→</div>
+      <div class="box">DB</div>
+    </div>
+  </div>
+</section>
+
 <!-- GITHUB -->
 <section id="github">
   <div class="container">
@@ -323,6 +433,66 @@
       <!-- JS render here -->
     </div>
   </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag" data-i18n="about.tag">About</div>
+      <h2 class="section-title-main" data-i18n="about.title">Who I am</h2>
+      <p class="section-subtitle" data-i18n="about.sub">
+        A quick intro about me
+      </p>
+    </div>
+
+    <div class="about-grid">
+
+    <!-- ✅ AVATAR -->
+    <div class="about-avatar reveal">
+        <img src="./assets/img/avatar.jpg" alt="avatar" />
+    </div>
+
+    <!-- ✅ TEXT -->
+    <div class="about-text reveal">
+        <p data-i18n="about.desc1"></p>
+        <p data-i18n="about.desc2"></p>
+        <p data-i18n="about.desc3"></p>
+
+        <!-- ✅ PHONE -->
+        <div class="about-contact">
+        <a href="tel:+84985363602">📞 +84 985363602</a>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- ✅ TIMELINE -->
+    <div class="about-timeline reveal">
+    <div class="timeline-line"></div>
+
+    <div class="timeline-item2">
+        <div class="dot"></div>
+        <div>
+        <strong>2021</strong> — Started professional development
+        </div>
+    </div>
+
+    <div class="timeline-item2">
+        <div class="dot"></div>
+        <div>
+        <strong>2023</strong> — Worked with enterprise systems
+        </div>
+    </div>
+
+    <div class="timeline-item2">
+        <div class="dot"></div>
+        <div>
+        <strong>2025</strong> — International projects & AI integration
+        </div>
+    </div>
+    </div>
+    </div>
 </section>
 
 <!-- MORE -->
@@ -369,6 +539,19 @@
         <h2 class="contact-heading" data-i18n="contact.heading">Ready to build something great?</h2>
         <p class="contact-sub" data-i18n="contact.sub">Open to full-time roles, contracts, and interesting freelance projects. Let's talk.</p>
         <a href="mailto:kiniemboquenjerry@gmail.com" class="contact-email">📬 kiniemboquenjerry@gmail.com</a>
+        <form action="https://formsubmit.co/kiniemboquenjerry@gmail.com" method="POST" class="contact-form">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn-primary">Send Message 🚀</button>
+
+        </form>
+        <!-- ✅ DOWNLOAD CV -->
+        <a href="javascript:void(0)" id="openCV" class="btn-primary contact-cv">
+        📄 View CV
+        </a>
         <div class="social-links"> 
           <a href="https://github.com/uncleyellow" target="_blank" class="social-link" title="GitHub">
           💻
@@ -381,11 +564,17 @@
     </div>
   </div>
 </section>
-
 <footer>
   <span>©<span id="year"></span> Dương Đình Khánh </span>
   <span data-i18n="footer.built">Built with <span style="color:#ef4444">♥</span> — No frameworks, pure craft</span>
 </footer>
+<!-- ✅ CV MODAL -->
+<div id="cvModal" class="cv-modal">
+  <div class="cv-content">
+    <span class="cv-close">&times;</span>
+    <iframe src="./assets/cv.pdf"></iframe>
+  </div>
+</div>
 <script src="./main.js"></script>
 </body>
 </html>

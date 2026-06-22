@@ -72,6 +72,29 @@
   "proj.title": "Featured Projects",
   "proj.sub": "Production systems across aviation, healthcare, telecoms, and education.",
 
+  
+  "case.tag": "Process",
+  "case.title": "How I Deliver Features",
+  "case.sub": "End-to-end development workflow",
+
+  "case.ba": "BA Refinement",
+  "case.ba_desc": "Collaborate with BA to clarify requirements and edge cases.",
+
+  "case.dev": "Development",
+  "case.dev_desc": "Build scalable and maintainable frontend features.",
+
+  "case.test": "Unit Testing",
+  "case.test_desc": "Ensure stability with unit testing.",
+
+  "case.pr": "Pull Request",
+  "case.pr_desc": "Create PR with clear description and review notes.",
+
+  "case.review": "Code Review",
+  "case.review_desc": "Improve code quality through team review.",
+
+  "case.sonar": "Fix Sonar",
+  "case.sonar_desc": "Resolve Sonar issues and optimize code quality.",
+
   "p1.title": "Cebu Pacific Air",
   "p2.title": "Hospital LIS System",
   "p3.title": "Viettel Contract Manager",
@@ -90,6 +113,17 @@
   "int1": "Basketball",
   "int2": "Guitar",
   "int3": "Gaming",
+
+  "about.tag": "About",
+  "about.title": "Who I am",
+  "about.sub": "A quick intro about me",
+  "about.desc1": "I’m a Frontend / Fullstack Developer with 5+ years of experience building scalable, high-performance web applications.",
+  "about.desc2": "Specialized in Angular, React, and modern JavaScript ecosystems, with strong experience in API integration and system architecture.",
+  "about.desc3": "I enjoy solving real-world problems and building meaningful products that deliver value to users.",
+  "about.exp": "Experience",
+  "about.projects": "Delivered",
+  "about.clients": "Clients",
+  "about.focus": "Focus",
 
   "contact.label": "Let's Work Together",
   "contact.heading": "Ready to build something great?",

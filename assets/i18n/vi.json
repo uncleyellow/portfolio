@@ -75,6 +75,28 @@
   "proj.title": "Dự án nổi bật",
   "proj.sub": "Hệ thống thực tế trong các lĩnh vực khác nhau.",
 
+  "case.tag": "Quy trình",
+  "case.title": "Quy trình phát triển",
+  "case.sub": "Từ yêu cầu đến production",
+
+  "case.ba": "Phân tích BA",
+  "case.ba_desc": "Làm việc với BA để làm rõ yêu cầu và logic nghiệp vụ.",
+
+  "case.dev": "Phát triển",
+  "case.dev_desc": "Xây dựng feature với code sạch và scalable.",
+
+  "case.test": "Kiểm thử",
+  "case.test_desc": "Viết unit test đảm bảo ổn định.",
+
+  "case.pr": "Pull Request",
+  "case.pr_desc": "Tạo PR rõ ràng, đầy đủ mô tả.",
+
+  "case.review": "Code Review",
+  "case.review_desc": "Review code cùng team cải thiện chất lượng.",
+
+  "case.sonar": "Fix Sonar",
+  "case.sonar_desc": "Fix lỗi Sonar và tối ưu code.",
+
   "cert.tag": "Chứng nhận",
   "cert.title": "Chứng chỉ",
   "cert1.sub": "2023 · Năng lực làm việc chuyên nghiệp",
@@ -85,6 +107,17 @@
   "int1": "Bóng rổ",
   "int2": "Guitar",
   "int3": "Gaming",
+
+  "about.tag": "Giới thiệu",
+  "about.title": "Về tôi",
+  "about.sub": "Một vài thông tin về bản thân",
+  "about.desc1": "Tôi là Frontend / Fullstack Developer với hơn 5 năm kinh nghiệm xây dựng ứng dụng web hiệu năng cao.",
+  "about.desc2": "Chuyên về Angular, React và hệ sinh thái JavaScript hiện đại, có kinh nghiệm tích hợp API và thiết kế hệ thống.",
+  "about.desc3": "Tôi thích giải quyết vấn đề thực tế và xây dựng các sản phẩm mang lại giá trị cho người dùng.",
+  "about.exp": "Kinh nghiệm",
+  "about.projects": "Dự án",
+  "about.clients": "Khách hàng",
+  "about.focus": "Chuyên môn",
 
   "contact.label": "Hợp tác cùng nhau",
   "contact.heading": "Sẵn sàng xây dựng điều gì đó tuyệt vời?",
