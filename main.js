@@ -1,155 +1,206 @@
-// ── i18n ──
-let i18n = {};
-let currentLang = 'en';
+import { CONFIG, TEXT, SELECTORS, OBSERVER_CONFIG, COMMON_CONSTANT } from "./constants/constants.js";
 
-let twPhrases = [];
-let twIndex = 0;
-let twChar = 0;
+// ── i18n ──
+let i18n = COMMON_CONSTANT.empty_object;
+let currentLang = CONFIG.DEFAULT_LANG;
+
+let twPhrases = COMMON_CONSTANT.empty_array;
+let twIndex = COMMON_CONSTANT.zero;
+let twChar = COMMON_CONSTANT.zero;
 let twDeleting = false;
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById(COMMON_CONSTANT.year).textContent = new Date().getFullYear();
 
 
 const timelineObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.2 });
-
-document.querySelectorAll('.timeline-item2').forEach(el => {
-  timelineObserver.observe(el);
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add(OBSERVER_CONFIG.visible);
+        }
+    });
+}, {
+    threshold: OBSERVER_CONFIG.threshold
 });
-const modal = document.getElementById("cvModal");
-const openBtn = document.getElementById("openCV");
-const closeBtn = document.querySelector(".cv-close");
+
+document.querySelectorAll(OBSERVER_CONFIG.timeline_item2).forEach(el => {
+    timelineObserver.observe(el);
+});
+const modal = document.getElementById(SELECTORS.cvModal);
+const openBtn = document.getElementById(SELECTORS.openCV);
+const closeBtn = document.querySelector(SELECTORS.cv_close);
 
 if (openBtn) {
-  openBtn.onclick = () => modal.style.display = "block";
+    openBtn.onclick = () => modal.style.display = "block";
 }
 
 if (closeBtn) {
-  closeBtn.onclick = () => modal.style.display = "none";
+    closeBtn.onclick = () => modal.style.display = "none";
 }
 
 globalThis.onclick = (e) => {
-  if (e.target === modal) modal.style.display = "none";
+    if (e.target === modal) modal.style.display = "none";
 };
 
-// ── Load language ──
+/**
+ * Load language JSON file and update UI text
+ * Includes fallback to English if loading fails
+ * Also resets typewriter phrases
+ * 
+ * @param   {string}        lang - Language code
+ * @returns {Promise<void>}
+ */
 async function loadLang(lang) {
-  try {
-    currentLang = lang;
+    try {
+        currentLang = lang;
 
-    const res = await fetch(`./assets/i18n/${lang}.json`);
-    if (!res.ok) throw new Error("Load failed");
+        const res = await fetch(`./assets/i18n/${lang}.json`);
+        if (!res.ok) throw new Error("Load failed");
 
-    i18n = await res.json();
-  } catch (e) {
-    console.error("Fallback to EN", e);
+        i18n = await res.json();
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.getAttribute('data-i18n-placeholder');
+          if (i18n[key]) el.placeholder = i18n[key];
+        });
+    } catch (e) {
+        console.error("Fallback to EN", e);
 
-    const res = await fetch(`./assets/i18n/en.json`);
-    i18n = await res.json();
-  }
+        const res = await fetch(`./assets/i18n/en.json`);
+        i18n = await res.json();
+    }
 
-  document.documentElement.lang = lang;
+    document.documentElement.lang = lang;
 
-  // update text
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (i18n[key]) el.innerHTML = i18n[key];
-  });
+    // update text
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[key]) el.innerHTML = i18n[key];
+    });
 
-  // update typewriter data
-  twPhrases = i18n.tw || [];
+    // update typewriter data
+    twPhrases = i18n.tw || [];
 
-  // reset typewriter state
-  twIndex = 0;
-  twChar = 0;
-  twDeleting = false;
+    // reset typewriter state
+    twIndex = 0;
+    twChar = 0;
+    twDeleting = false;
 
-  // update title
-  document.title =
-    lang === 'vi'
-      ? 'Portfolio — Lập trình viên Frontend / Fullstack'
-      : 'Portfolio — Frontend / Fullstack Developer';
+    // update title
+    document.title =
+        lang === CONFIG.VI_LANG ?
+        'Portfolio — Lập trình viên Frontend / Fullstack' :
+        'Portfolio — Frontend / Fullstack Developer';
 
-  // update active button
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
-  });
+    // update active button
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
+    });
 }
 
+/**
+ * Fetch GitHub repositories and render top projects
+ * Automatically hides section if API fails or no valid repo found
+ * 
+ * @returns {Promise<void>}
+ */
 async function loadGithubRepos() {
-  const username = "uncleyellow";
-
-  try {
-    const res = await fetch(`https://api.github.com/users/${username}/repos?sort=updated`);
-    const repos = await res.json();
+    const username = CONFIG.GITHUB_USERNAME;
 
     const container = document.getElementById("githubRepos");
-    if (!container) return;
+    const section = document.getElementById("github");
 
-    // ✅ filter repo chất lượng
-    let filtered = repos
-      .filter(r => !r.fork && r.description) // bỏ fork + repo rỗng
-      .sort((a, b) => b.stargazers_count - a.stargazers_count) // sort theo star
-      .slice(0, 6); // lấy top 6
+    if (!container || !section) return;
 
-    container.innerHTML = filtered.map(repo => `
-      <div class="project-card github-card visible">
+    try {
+        const res = await fetch(
+          `${CONFIG.GITHUB_API}${username}/repos?sort=updated`,
+          {
+            headers: {
+              Accept: "application/vnd.github+json"
+            }
+          }
+        );
 
-        <div class="project-title">
-          ${repo.name}
-        </div>
+        // ❌ API fail
+        if (!res.ok) throw new Error("GitHub API error");
 
-        <div class="project-desc">
-          ${repo.description}
-        </div>
+        const repos = await res.json();
 
-        <div class="project-stack">
-          <span class="project-tag">${repo.language || "Code"}</span>
-          <span class="project-tag">⭐ ${repo.stargazers_count}</span>
-          <span class="project-tag">🍴 ${repo.forks_count}</span>
-        </div>
+        // ✅ filter repo chất lượng
+        let filtered = repos
+            .filter(r => !r.fork && r.description)
+            .sort((a, b) => b.stargazers_count - a.stargazers_count)
+            .slice(0, 6);
 
-        <a href="${repo.html_url}" target="_blank" class="project-arrow-link">
-          <div class="project-arrow">→</div>
-        </a>
+        // ❌ Không có repo -> ẩn section
+        if (!filtered || filtered.length === 0) {
+            section.style.display = "none";
+            return;
+        }
 
-      </div>
-    `).join("");
+        // ✅ render
+        container.innerHTML = filtered.map(repo => `
+            <div class="project-card github-card visible">
 
-  } catch (err) {
-    console.error("GitHub error", err);
-  }
+                <div class="project-title">
+                    ${repo.name}
+                </div>
+
+                <div class="project-desc">
+                    ${repo.description}
+                </div>
+
+                <div class="project-stack">
+                    <span class="project-tag">${repo.language || "Code"}</span>
+                    <span class="project-tag">⭐ ${repo.stargazers_count}</span>
+                    <span class="project-tag">🍴 ${repo.forks_count}</span>
+                </div>
+
+                <a href="${repo.html_url}" target="_blank" class="project-arrow-link">
+                    <div class="project-arrow">→</div>
+                </a>
+
+            </div>
+        `).join("");
+
+    } catch (err) {
+        console.error("GitHub error", err);
+
+        // ❌ Lỗi mạng / rate limit -> ẩn luôn
+        section.style.display = "none";
+    }
 }
 
+/**
+ * Toggle expand/collapse for case study item
+ * @param {HTMLElement} el - The clicked case study element
+ */
 function toggleCase(el) {
-  el.classList.toggle("active");
+    el.classList.toggle("active");
 }
 
-// ── change language ──
+/**
+ * Change current language and save to localStorage
+ * @param {string} lang - Language code ("en" or "vi")
+ */
 function setLang(lang) {
-  localStorage.setItem('lang', lang);
-  loadLang(lang);
+    localStorage.setItem('lang', lang);
+    loadLang(lang);
 }
 
 // ── Cursor Orb ──
 const orb = document.getElementById('orb');
 if (orb) {
-  document.addEventListener('mousemove', e => {
-    orb.style.left = e.clientX + 'px';
-    orb.style.top = e.clientY + 'px';
-  });
+    document.addEventListener('mousemove', e => {
+        orb.style.left = e.clientX + 'px';
+        orb.style.top = e.clientY + 'px';
+    });
 }
 
 // ── Nav scroll ──
 const navbar = document.getElementById('navbar');
 if (navbar) {
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 40);
-  });
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
 }
 
 // ── Hamburger ──
@@ -157,83 +208,98 @@ const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
 if (hamburger && mobileMenu) {
-  hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('open');
-  });
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+    });
 }
 
+/**
+ * Closes the mobile navigation menu
+ * Removes the "open" class from the mobile menu element if it exists
+ *
+ * @function
+ * @returns {void}
+ */
 function closeMobile() {
-  if (mobileMenu) mobileMenu.classList.remove('open');
+    if (mobileMenu) mobileMenu.classList.remove('open');
 }
 
 // ── Typewriter ──
 const tw = document.getElementById('typewriter');
 
+/**
+ * Typewriter animation loop
+ * Cycles through translated phrases with typing/deleting effect
+ */
 function type() {
-  if (!tw || !twPhrases.length) {
-    setTimeout(type, 200);
-    return;
-  }
-
-  const phrase = twPhrases[twIndex % twPhrases.length];
-
-  if (!twDeleting) {
-    tw.textContent = phrase.slice(0, ++twChar);
-
-    if (twChar === phrase.length) {
-      twDeleting = true;
-      setTimeout(type, 1800);
-      return;
+    if (!tw || !twPhrases.length) {
+        setTimeout(type, 200);
+        return;
     }
-  } else {
-    tw.textContent = phrase.slice(0, --twChar);
 
-    if (twChar === 0) {
-      twDeleting = false;
-      twIndex++;
+    const phrase = twPhrases[twIndex % twPhrases.length];
+
+    if (!twDeleting) {
+        tw.textContent = phrase.slice(0, ++twChar);
+
+        if (twChar === phrase.length) {
+            twDeleting = true;
+            setTimeout(type, 1800);
+            return;
+        }
+    } else {
+        tw.textContent = phrase.slice(0, --twChar);
+
+        if (twChar === 0) {
+            twDeleting = false;
+            twIndex++;
+        }
     }
-  }
 
-  setTimeout(type, twDeleting ? 50 : 90);
+    setTimeout(type, twDeleting ? 50 : 90);
 }
 
 // ── Intersection Observer — reveal ──
 const io = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, i * 80);
+    entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add('visible');
+            }, i * 80);
 
-      io.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
+            io.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.12
+});
 
 document.querySelectorAll('.reveal, .timeline-item, .project-card')
-  .forEach(el => io.observe(el));
+    .forEach(el => io.observe(el));
 
 // ── Skill bars ──
 const skillObs = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.style.width = entry.target.dataset.width + '%';
-      }, 200);
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.style.width = entry.target.dataset.width + '%';
+            }, 200);
 
-      skillObs.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.3 });
+            skillObs.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.3
+});
 
 document.querySelectorAll('.skill-fill')
-  .forEach(f => skillObs.observe(f));
+    .forEach(f => skillObs.observe(f));
 
 
-// ✅ INIT APP (QUAN TRỌNG NHẤT)
+// ✅ INIT APP 
 const savedLang = localStorage.getItem('lang') || 'en';
 
 loadLang(savedLang).then(() => {
-  type(); // start ONLY AFTER data ready
-  loadGithubRepos();
+    type(); // start ONLY AFTER data ready
+    loadGithubRepos();
 });
