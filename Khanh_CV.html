@@ -3,458 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Duong Dinh Khanh — CV</title>
-<style>
-  /* ============================================================
-     RESET & BASE
-  ============================================================ */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-
-  body {
-    font-family: "Liberation Sans", Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    line-height: 1.5;
-    color: #334155;
-    background: #E5E7EB;
-  }
-
-  @page {
-    size: A4;
-    margin: 0;
-  }
-
-  /* ============================================================
-     PAGE SHELL
-  ============================================================ */
-  .page {
-    width: 210mm;
-    height: 200mm;
-    display: -webkit-flex;
-    display: flex;
-    overflow: hidden;
-    page-break-after: always;
-    background: #ffffff;
-    margin: 0 auto;
-  }
-
-  /* ============================================================
-     LEFT SIDEBAR
-  ============================================================ */
-  .sidebar {
-    width: 68mm;
-    min-width: 68mm;
-    background: #0B1629;
-    color: #E2E8F0;
-    padding: 22px 16px 16px 16px;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    overflow: hidden;
-  }
-
-  /* ---- avatar ---- */
-  .avatar-wrap {
-    display: -webkit-flex;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 14px;
-  }
-  .avatar {
-    width: 78px;
-    height: 78px;
-    border-radius: 50%;
-    background: #162032;
-    border: 2.5px solid #22D3EE;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    text-align: center;
-  }
-  .avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-  }
-  .avatar-placeholder {
-    font-size: 6.5px;
-    color: #475569;
-    text-align: center;
-    line-height: 1.6;
-    padding: 4px;
-  }
-
-  /* ---- stats ---- */
-  .stats-row {
-    display: -webkit-flex;
-    display: flex;
-    gap: 5px;
-    margin-bottom: 14px;
-  }
-  .stat-box {
-    -webkit-flex: 1;
-    flex: 1;
-    border: 1px solid rgba(34,211,238,0.22);
-    border-radius: 6px;
-    background: rgba(255,255,255,0.04);
-    padding: 6px 3px;
-    text-align: center;
-  }
-  .stat-num {
-    font-size: 17px;
-    font-weight: 700;
-    color: #22D3EE;
-    line-height: 1;
-  }
-  .stat-lbl {
-    font-size: 10px;
-    color: #64748B;
-    margin-top: 2px;
-    line-height: 1.3;
-  }
-
-  /* ---- sidebar section ---- */
-  .ss {
-    margin-bottom: 12px;
-  }
-  .ss-title {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.3px;
-    text-transform: uppercase;
-    color: #22D3EE;
-    margin-bottom: 7px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid rgba(34,211,238,0.18);
-  }
-
-  /* ---- contact ---- */
-  .c-row {
-    display: -webkit-flex;
-    display: flex;
-    align-items: flex-start;
-    gap: 5px;
-    margin-bottom: 5px;
-  }
-  .c-icon {
-    font-size: 11px;
-    color: #22D3EE;
-    width: 11px;
-    -webkit-flex-shrink: 0;
-    flex-shrink: 0;
-    margin-top: 0.5px;
-    font-weight: 700;
-  }
-  .c-val {
-    font-size: 13px;
-    color: #94A3B8;
-    line-height: 1.4;
-    word-break: break-all;
-  }
-
-  /* ---- pills ---- */
-  .pills {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    gap: 3px;
-  }
-  .pill {
-    background: rgba(34,211,238,0.10);
-    color: #A5F3FC;
-    border: 1px solid rgba(34,211,238,0.22);
-    border-radius: 9px;
-    padding: 2px 6px;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.4;
-  }
-
-  /* ---- language bars ---- */
-  .lang-item { margin-bottom: 7px; }
-  .lang-row {
-    display: -webkit-flex;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2px;
-  }
-  .lang-name { font-size: 10px; color: #CBD5E1; font-weight: 600; }
-  .lang-lvl  { font-size: 11px; color: #64748B; }
-  .lang-bar  { height: 3px; background: rgba(255,255,255,0.07); border-radius: 2px; }
-  .lang-fill { height: 3px; background: linear-gradient(90deg,#22D3EE,#0EA5E9); border-radius: 2px; }
-
-  /* ---- certs ---- */
-  .cert-item { margin-bottom: 6px; }
-  .cert-name { font-size: 8px; color: #E2E8F0; font-weight: 600; }
-  .cert-meta { font-size: 7px; color: #64748B; margin-top: 1px; }
-
-  /* ---- sidebar workflow ---- */
-  .wf-row {
-    display: -webkit-flex;
-    display: flex;
-    align-items: baseline;
-    gap: 5px;
-    padding: 2.5px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
-  }
-  .wf-num  { font-size: 6.5px; color: #22D3EE; font-weight: 700; width: 13px; -webkit-flex-shrink: 0; flex-shrink: 0; }
-  .wf-text { font-size: 7.5px; color: #94A3B8; line-height: 1.4; }
-
-  /* ---- live box ---- */
-  .live-box {
-    border: 1px solid rgba(34,211,238,0.22);
-    border-radius: 6px;
-    background: rgba(34,211,238,0.06);
-    padding: 9px;
-    margin-top: 5px;
-  }
-  .live-label    { font-size: 6.5px; color: #22D3EE; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
-  .live-pname    { font-size: 8px; color: #CBD5E1; font-weight: 600; line-height: 1.4; margin-bottom: 2px; }
-  .live-url      { font-size: 7px; color: #475569; word-break: break-all; }
-
-  .sb-footer {
-    margin-top: 12px;
-    font-size: 7px;
-    color: #334155;
-    line-height: 1.8;
-  }
-  .sb-footer span { color: #22D3EE; font-weight: 700; }
-
-  /* ============================================================
-     RIGHT MAIN CONTENT
-  ============================================================ */
-  .main {
-    -webkit-flex: 1;
-    flex: 1;
-    padding: 18px 18px 14px 18px;
-    background: #FFFFFF;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    overflow: hidden;
-  }
-
-  /* ---- header ---- */
-  .cv-header {
-    border-bottom: 2px solid #E2E8F0;
-    padding-bottom: 11px;
-    margin-bottom: 12px;
-  }
-  .cv-name {
-    font-size: 25px;
-    font-weight: 700;
-    color: #0F172A;
-    letter-spacing: -0.5px;
-    line-height: 1.05;
-    margin-bottom: 6px;
-  }
-  .cv-badge {
-    display: inline-block;
-    background: #EFF6FF;
-    border: 1px solid #BFDBFE;
-    border-radius: 16px;
-    padding: 3px 11px;
-    font-size: 9px;
-    font-weight: 600;
-    color: #1D4ED8;
-    letter-spacing: 0.2px;
-  }
-  .cv-loc {
-    display: inline-block;
-    font-size: 8px;
-    color: #64748B;
-    margin-left: 8px;
-  }
-
-  /* ---- section ---- */
-  .sec { margin-bottom: 12px; }
-
-  .sec-title {
-    font-size: 7.5px;
-    font-weight: 700;
-    letter-spacing: 1.3px;
-    text-transform: uppercase;
-    color: #1E40AF;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 8px;
-  }
-  .sec-bar {
-    width: 3px;
-    height: 12px;
-    background: linear-gradient(to bottom,#22D3EE,#3B82F6);
-    border-radius: 2px;
-    display: inline-block;
-    -webkit-flex-shrink: 0;
-    flex-shrink: 0;
-  }
-  .sec-line {
-    -webkit-flex: 1;
-    flex: 1;
-    height: 1px;
-    background: #E2E8F0;
-    display: inline-block;
-  }
-
-  /* ---- summary ---- */
-  .summary {
-    font-size: 9px;
-    color: #334155;
-    line-height: 1.7;
-  }
-
-  /* ---- strength pills ---- */
-  .strength-wrap {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    gap: 4px;
-  }
-  .sp {
-    background: #F0F9FF;
-    border: 1px solid #BAE6FD;
-    border-radius: 9px;
-    padding: 2.5px 8px;
-    font-size: 8px;
-    color: #0369A1;
-    font-weight: 500;
-  }
-
-  /* ---- experience ---- */
-  .exp { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #F1F5F9; }
-  .exp:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-
-  .exp-top {
-    display: -webkit-flex;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 2px;
-  }
-  .exp-role   { font-size: 10px; font-weight: 700; color: #0F172A; }
-  .exp-period {
-    font-size: 7.5px;
-    color: #64748B;
-    background: #F1F5F9;
-    border: 1px solid #E2E8F0;
-    border-radius: 8px;
-    padding: 1px 7px;
-    white-space: nowrap;
-    -webkit-flex-shrink: 0;
-    flex-shrink: 0;
-    margin-left: 5px;
-  }
-  .exp-co-line {
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-bottom: 3px;
-  }
-  .exp-co     { font-size: 8px; color: #1D4ED8; font-weight: 600; }
-  .exp-domain {
-    font-size: 7px;
-    background: #EDE9FE;
-    color: #5B21B6;
-    border-radius: 6px;
-    padding: 1px 5px;
-    font-weight: 500;
-  }
-  .exp-ul { list-style: none; margin-bottom: 3px; }
-  .exp-ul li {
-    font-size: 8.5px;
-    color: #475569;
-    padding-left: 10px;
-    position: relative;
-    margin-bottom: 2px;
-    line-height: 1.55;
-  }
-  .exp-ul li::before {
-    content: "\25B8";
-    position: absolute;
-    left: 0;
-    color: #0EA5E9;
-    font-size: 7px;
-    top: 1.5px;
-  }
-
-  /* ---- tech tags ---- */
-  .tags {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    gap: 3px;
-    margin-top: 3px;
-  }
-  .tag {
-    background: #F8FAFC;
-    border: 1px solid #CBD5E1;
-    border-radius: 3px;
-    padding: 1px 5px;
-    font-size: 7px;
-    color: #64748B;
-    font-weight: 500;
-  }
-
-  /* ---- project cards ---- */
-  .proj-grid {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  .proj-card {
-    width: calc(50% - 4px);
-    background: #F8FAFC;
-    border: 1px solid #E2E8F0;
-    border-radius: 6px;
-    padding: 8px;
-    border-left: 3px solid #22D3EE;
-  }
-  .proj-card.green { border-left-color: #10B981; }
-  .proj-name  { font-size: 9px; font-weight: 700; color: #0F172A; margin-bottom: 3px; }
-  .live-badge { font-size: 6.5px; color: #10B981; font-weight: 600; }
-  .proj-desc  { font-size: 7.5px; color: #64748B; line-height: 1.5; margin-bottom: 5px; }
-
-  /* ---- personal project spotlight ---- */
-  .spotlight {
-    background: #F0F9FF;
-    border: 1px solid #BAE6FD;
-    border-radius: 7px;
-    padding: 10px;
-  }
-
-  /* ---- footer ---- */
-  .cv-footer {
-    display: -webkit-flex;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #E2E8F0;
-    padding-top: 8px;
-    margin-top: auto;
-  }
-  .ft { font-size: 7px; color: #94A3B8; }
-
-</style>
+<link rel="stylesheet" href="./assets/css/cv.css">
 </head>
 <body>
 
@@ -492,7 +41,7 @@
         <div class="stat-lbl">Projects<br>Done</div>
       </div>
       <div class="stat-box">
-        <div class="stat-num">3+</div>
+        <div class="stat-num">5+</div>
         <div class="stat-lbl">Companies<br>/ Clients</div>
       </div>
     </div>
@@ -501,24 +50,28 @@
     <div class="ss">
       <div class="ss-title">Contact</div>
       <div class="c-row">
-        <div class="c-icon">@</div>
+        <div class="c-icon">✉️</div>
         <div class="c-val">kiniemboquenjerry@gmail.com</div>
       </div>
       <div class="c-row">
-        <div class="c-icon">T</div>
+        <div class="c-icon">📞</div>
         <div class="c-val">+84 985 363 602</div>
       </div>
       <div class="c-row">
-        <div class="c-icon">*</div>
+        <div class="c-icon">🏙️</div>
         <div class="c-val">Ha Noi City, Vietnam</div>
       </div>
       <div class="c-row">
-        <div class="c-icon">G</div>
+        <div class="c-icon">🔗</div>
         <div class="c-val">github.com/uncleyellow</div>
       </div>
       <div class="c-row">
-        <div class="c-icon">W</div>
-        <div class="c-val">khanh.dev</div>
+        <div class="c-icon">📓</div>
+        <div class="c-val">
+          <a href="https://uncleyellow.github.io/portfolio/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: aquamarine;">
+            Portfolio
+          </a>
+        </div>
       </div>
     </div>
 
@@ -750,7 +303,7 @@
 <div class="page">
 
   <!-- ───── SIDEBAR PAGE 2 ───── -->
-  <div class="sidebar">
+  <div class="sidebar sidebar-2">
 
     <div class="ss">
       <div class="ss-title">Dev Workflow</div>
@@ -767,7 +320,7 @@
 
     <div class="ss">
       <div class="ss-title">Interests</div>
-      <div style="font-size:8px;color:#94A3B8;line-height:2;">
+      <div style="font-size:12px;color:#94A3B8;line-height:2;">
         Basketball &nbsp;|&nbsp; Guitar &nbsp;|&nbsp; Gaming
       </div>
     </div>
@@ -804,7 +357,7 @@
   </div><!-- /sidebar p2 -->
 
   <!-- ───── MAIN PAGE 2 ───── -->
-  <div class="main">
+  <div class="main main-page-2">
 
     <!-- Featured Projects -->
     <div class="sec">
@@ -889,12 +442,12 @@
     </div>
 
     <!-- Footer -->
-    <div style="margin-top:12px;">
+    <!-- <div style="margin-top:12px;">
       <div class="cv-footer">
         <div class="ft">Duong Dinh Khanh &nbsp;·&nbsp; Frontend / Fullstack Developer &nbsp;·&nbsp; Ha Noi, Vietnam</div>
         <div class="ft">kiniemboquenjerry@gmail.com &nbsp;·&nbsp; +84 985 363 602 &nbsp;·&nbsp; github.com/uncleyellow</div>
       </div>
-    </div>
+    </div> -->
 
   </div><!-- /main p2 -->
 </div><!-- /page 2 -->
