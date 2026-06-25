@@ -8,9 +8,77 @@ let twPhrases = COMMON_CONSTANT.empty_array;
 let twIndex = COMMON_CONSTANT.zero;
 let twChar = COMMON_CONSTANT.zero;
 let twDeleting = false;
+
 document.getElementById(COMMON_CONSTANT.year).textContent = new Date().getFullYear();
+document.addEventListener('mousemove', (e) => {
+  const x = (window.innerWidth / 2 - e.clientX) / 25;
+  const y = (window.innerHeight / 2 - e.clientY) / 25;
 
+  document.querySelectorAll('.hero-avatar-card').forEach(el => {
+    el.style.transform = `translate(${x}px, ${y}px)`;
+  });
+});
+document.querySelectorAll('.btn-primary').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    const circle = document.createElement('span');
+    circle.classList.add('ripple');
 
+    const rect = this.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+
+    circle.style.width = circle.style.height = size + 'px';
+    circle.style.left = e.clientX - rect.left - size/2 + 'px';
+    circle.style.top = e.clientY - rect.top - size/2 + 'px';
+
+    this.appendChild(circle);
+
+    setTimeout(() => circle.remove(), 600);
+  });
+});
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const height = document.body.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / height) * 100;
+
+  document.getElementById('progressBar').style.width = progress + '%';
+});
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+
+  sections.forEach(section => {
+    const top = section.offsetTop - 100;
+    if (window.scrollY >= top) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href').includes(current)) {
+      link.classList.add('active');
+    }
+  });
+});
+document.querySelectorAll('.contact-cv').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    const circle = document.createElement('span');
+
+    const rect = this.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+
+    circle.style.width = circle.style.height = size + 'px';
+    circle.style.left = e.clientX - rect.left - size / 2 + 'px';
+    circle.style.top = e.clientY - rect.top - size / 2 + 'px';
+
+    circle.classList.add('ripple');
+    this.appendChild(circle);
+
+    setTimeout(() => circle.remove(), 600);
+  });
+});
 const timelineObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -36,7 +104,7 @@ if (closeBtn) {
     closeBtn.onclick = () => modal.style.display = "none";
 }
 
-globalThis.onclick = (e) => {
+window.onclick = (e) => {
     if (e.target === modal) modal.style.display = "none";
 };
 
@@ -103,10 +171,9 @@ async function loadLang(lang) {
  */
 async function loadGithubRepos() {
     const username = CONFIG.GITHUB_USERNAME;
-
     const container = document.getElementById("githubRepos");
     const section = document.getElementById("github");
-
+    container.classList.remove('loading');
     if (!container || !section) return;
 
     try {
@@ -169,12 +236,56 @@ async function loadGithubRepos() {
     }
 }
 
-/**
- * Toggle expand/collapse for case study item
- * @param {HTMLElement} el - The clicked case study element
- */
-function toggleCase(el) {
-    el.classList.toggle("active");
+const caseGrid = document.querySelector('.case-grid');
+
+if (caseGrid) {
+  caseGrid.addEventListener('click', handleCaseToggle);
+  caseGrid.addEventListener('keydown', handleCaseKeyboard);
+}
+
+function handleCaseToggle(e) {
+  const item = e.target.closest('.case-item');
+  if (!item) return;
+
+  const isActive = item.classList.contains('active');
+
+  // close all items
+  document.querySelectorAll('.case-item.active').forEach(el => {
+    el.classList.remove('active');
+    updateToggleIcon(el, false);
+  });
+
+  // open current
+  if (!isActive) {
+    item.classList.add('active');
+    updateToggleIcon(item, true);
+
+    // smooth scroll (UX xịn)
+    item.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  }
+}
+
+// ✅ keyboard accessibility (senior point)
+function handleCaseKeyboard(e) {
+  if (e.key !== 'Enter' && e.key !== ' ') return;
+
+  const item = e.target.closest('.case-item');
+  if (!item) return;
+
+  e.preventDefault();
+  item.click();
+}
+
+
+// update +/- icon
+function updateToggleIcon(item, isOpen) {
+  const toggle = item.querySelector('.case-toggle');
+  if (toggle) {
+    toggle.textContent = isOpen ? '−' : '+';
+  }
 }
 
 /**
@@ -185,6 +296,8 @@ function setLang(lang) {
     localStorage.setItem('lang', lang);
     loadLang(lang);
 }
+
+globalThis.setLang = setLang;
 
 // ── Cursor Orb ──
 const orb = document.getElementById('orb');
@@ -274,7 +387,12 @@ const io = new IntersectionObserver((entries) => {
     threshold: 0.12
 });
 
+// ✅ Đây là chỗ đúng để đặt
 document.querySelectorAll('.reveal, .timeline-item, .project-card')
+    .forEach(el => io.observe(el));
+
+// 👉 ✅ THÊM NGAY DƯỚI ĐÂY
+document.querySelectorAll('.case-item')
     .forEach(el => io.observe(el));
 
 // ── Skill bars ──

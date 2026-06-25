@@ -24,6 +24,11 @@
    </head>
    
    <body>
+      <div id="progressBar"></div>
+      <!-- ✅ MÀN CHÀO ĐEN – ĐẶT NGAY ĐẦU BODY -->
+      <div id="introScreen" class="intro-screen" aria-hidden="false">
+         <div id="introGreeting" class="intro-greeting"></div>
+      </div>
       <div id="orb">
       </div>
       <!-- NAV -->
@@ -828,7 +833,7 @@
             </div>
             <div class="case-grid">
                <!-- ITEM -->
-               <div class="case-item reveal" onclick="toggleCase(this)">
+               <div class="case-item reveal" tabindex="0">
                   <div class="case-header">
                      <div class="case-step">
                         01
@@ -855,7 +860,7 @@
                      </ul>
                   </div>
                </div>
-               <div class="case-item reveal" onclick="toggleCase(this)">
+               <div class="case-item reveal" tabindex="0">
                   <div class="case-header">
                      <div class="case-step">
                         02
@@ -882,7 +887,7 @@
                      </ul>
                   </div>
                </div>
-               <div class="case-item reveal" onclick="toggleCase(this)">
+               <div class="case-item reveal" tabindex="0">
                   <div class="case-header">
                      <div class="case-step">
                         03
@@ -898,7 +903,7 @@
                      </p>
                   </div>
                </div>
-               <div class="case-item reveal" onclick="toggleCase(this)">
+               <div class="case-item reveal" tabindex="0">
                   <div class="case-header">
                      <div class="case-step">
                         04
@@ -914,7 +919,7 @@
                      </p>
                   </div>
                </div>
-               <div class="case-item reveal" onclick="toggleCase(this)">
+               <div class="case-item reveal" tabindex="0">
                   <div class="case-header">
                      <div class="case-step">
                         05
@@ -930,7 +935,7 @@
                      </p>
                   </div>
                </div>
-               <div class="case-item reveal" onclick="toggleCase(this)">
+               <div class="case-item reveal" tabindex="0">
                   <div class="case-header">
                      <div class="case-step">
                         06
@@ -993,7 +998,7 @@
                   Real code from my repositories
                </p>
             </div>
-            <div class="projects-grid" id="githubRepos">
+            <div class="projects-grid loading" id="githubRepos">
                <!-- JS render here -->
             </div>
          </div>
@@ -1171,9 +1176,25 @@
                   </a>
                   <form action="https://formsubmit.co/kiniemboquenjerry@gmail.com" method="POST"
                   class="contact-form" enctype="multipart/form-data">
-                     <input type="text" name="name" placeholder="Your Name" required>
-                     <input type="email" name="email" placeholder="Your Email" required>
-                     <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                     <div class="input-group">
+                        <input type="text" name="name" required>
+                        <label>Your Name</label>
+                     </div>
+
+                     <div class="input-group">
+                        <input type="email" name="email" required>
+                        <label>Your Email</label>
+                     </div>
+
+                     <div class="input-group">
+                        <textarea name="message" rows="4" required></textarea>
+                        <label>Your Message</label>
+                     </div>
+
+                     <div class="file-upload">
+                        <input type="file" name="attachment" id="fileInput">
+                        <label for="fileInput">📎 Attach file</label>
+                     </div>
                      <!-- Upload file -->
                      <input type="file" name="attachment" accept=".pdf,.doc,.docx,.png,.jpg">
                      <button type="submit" class="btn-primary">
@@ -1182,7 +1203,7 @@
                   </form>
                   <!-- ✅ DOWNLOAD CV -->
                   <a href="javascript:void(0)" id="openCV" class="btn-primary contact-cv">
-                     📄 View CV
+                     <span>📄 View CV</span>
                   </a>
                   <div class="social-links">
                      <a href="https://github.com/uncleyellow" target="_blank" class="social-link"
@@ -1228,7 +1249,7 @@
             </iframe>
          </div>
       </div>
-      <script src="./main.js" type="module">
-      </script>
+      <script src="./main.js" type="module"></script>
+      <script src="./intro-greeting.js"></script>
    </body>
 </html>
