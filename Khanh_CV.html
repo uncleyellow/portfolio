@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Duong Dinh Khanh — CV</title>
+<style>
+  /* ============================================================
+     RESET & BASE
+  ============================================================ */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    font-family: "Liberation Sans", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #334155;
+    background: #E5E7EB;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  /* ============================================================
+     PAGE SHELL
+  ============================================================ */
+  .page {
+    width: 210mm;
+    height: 200mm;
+    display: -webkit-flex;
+    display: flex;
+    overflow: hidden;
+    page-break-after: always;
+    background: #ffffff;
+    margin: 0 auto;
+  }
+
+  /* ============================================================
+     LEFT SIDEBAR
+  ============================================================ */
+  .sidebar {
+    width: 68mm;
+    min-width: 68mm;
+    background: #0B1629;
+    color: #E2E8F0;
+    padding: 22px 16px 16px 16px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* ---- avatar ---- */
+  .avatar-wrap {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+  .avatar {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    background: #162032;
+    border: 2.5px solid #22D3EE;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+  }
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+  }
+  .avatar-placeholder {
+    font-size: 6.5px;
+    color: #475569;
+    text-align: center;
+    line-height: 1.6;
+    padding: 4px;
+  }
+
+  /* ---- stats ---- */
+  .stats-row {
+    display: -webkit-flex;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 14px;
+  }
+  .stat-box {
+    -webkit-flex: 1;
+    flex: 1;
+    border: 1px solid rgba(34,211,238,0.22);
+    border-radius: 6px;
+    background: rgba(255,255,255,0.04);
+    padding: 6px 3px;
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 17px;
+    font-weight: 700;
+    color: #22D3EE;
+    line-height: 1;
+  }
+  .stat-lbl {
+    font-size: 10px;
+    color: #64748B;
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+
+  /* ---- sidebar section ---- */
+  .ss {
+    margin-bottom: 12px;
+  }
+  .ss-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: #22D3EE;
+    margin-bottom: 7px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(34,211,238,0.18);
+  }
+
+  /* ---- contact ---- */
+  .c-row {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+  .c-icon {
+    font-size: 11px;
+    color: #22D3EE;
+    width: 11px;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    margin-top: 0.5px;
+    font-weight: 700;
+  }
+  .c-val {
+    font-size: 13px;
+    color: #94A3B8;
+    line-height: 1.4;
+    word-break: break-all;
+  }
+
+  /* ---- pills ---- */
+  .pills {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+  .pill {
+    background: rgba(34,211,238,0.10);
+    color: #A5F3FC;
+    border: 1px solid rgba(34,211,238,0.22);
+    border-radius: 9px;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  /* ---- language bars ---- */
+  .lang-item { margin-bottom: 7px; }
+  .lang-row {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
+  }
+  .lang-name { font-size: 10px; color: #CBD5E1; font-weight: 600; }
+  .lang-lvl  { font-size: 11px; color: #64748B; }
+  .lang-bar  { height: 3px; background: rgba(255,255,255,0.07); border-radius: 2px; }
+  .lang-fill { height: 3px; background: linear-gradient(90deg,#22D3EE,#0EA5E9); border-radius: 2px; }
+
+  /* ---- certs ---- */
+  .cert-item { margin-bottom: 6px; }
+  .cert-name { font-size: 8px; color: #E2E8F0; font-weight: 600; }
+  .cert-meta { font-size: 7px; color: #64748B; margin-top: 1px; }
+
+  /* ---- sidebar workflow ---- */
+  .wf-row {
+    display: -webkit-flex;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    padding: 2.5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .wf-num  { font-size: 6.5px; color: #22D3EE; font-weight: 700; width: 13px; -webkit-flex-shrink: 0; flex-shrink: 0; }
+  .wf-text { font-size: 7.5px; color: #94A3B8; line-height: 1.4; }
+
+  /* ---- live box ---- */
+  .live-box {
+    border: 1px solid rgba(34,211,238,0.22);
+    border-radius: 6px;
+    background: rgba(34,211,238,0.06);
+    padding: 9px;
+    margin-top: 5px;
+  }
+  .live-label    { font-size: 6.5px; color: #22D3EE; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+  .live-pname    { font-size: 8px; color: #CBD5E1; font-weight: 600; line-height: 1.4; margin-bottom: 2px; }
+  .live-url      { font-size: 7px; color: #475569; word-break: break-all; }
+
+  .sb-footer {
+    margin-top: 12px;
+    font-size: 7px;
+    color: #334155;
+    line-height: 1.8;
+  }
+  .sb-footer span { color: #22D3EE; font-weight: 700; }
+
+  /* ============================================================
+     RIGHT MAIN CONTENT
+  ============================================================ */
+  .main {
+    -webkit-flex: 1;
+    flex: 1;
+    padding: 18px 18px 14px 18px;
+    background: #FFFFFF;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* ---- header ---- */
+  .cv-header {
+    border-bottom: 2px solid #E2E8F0;
+    padding-bottom: 11px;
+    margin-bottom: 12px;
+  }
+  .cv-name {
+    font-size: 25px;
+    font-weight: 700;
+    color: #0F172A;
+    letter-spacing: -0.5px;
+    line-height: 1.05;
+    margin-bottom: 6px;
+  }
+  .cv-badge {
+    display: inline-block;
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    border-radius: 16px;
+    padding: 3px 11px;
+    font-size: 9px;
+    font-weight: 600;
+    color: #1D4ED8;
+    letter-spacing: 0.2px;
+  }
+  .cv-loc {
+    display: inline-block;
+    font-size: 8px;
+    color: #64748B;
+    margin-left: 8px;
+  }
+
+  /* ---- section ---- */
+  .sec { margin-bottom: 12px; }
+
+  .sec-title {
+    font-size: 7.5px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: #1E40AF;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+  .sec-bar {
+    width: 3px;
+    height: 12px;
+    background: linear-gradient(to bottom,#22D3EE,#3B82F6);
+    border-radius: 2px;
+    display: inline-block;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+  }
+  .sec-line {
+    -webkit-flex: 1;
+    flex: 1;
+    height: 1px;
+    background: #E2E8F0;
+    display: inline-block;
+  }
+
+  /* ---- summary ---- */
+  .summary {
+    font-size: 9px;
+    color: #334155;
+    line-height: 1.7;
+  }
+
+  /* ---- strength pills ---- */
+  .strength-wrap {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .sp {
+    background: #F0F9FF;
+    border: 1px solid #BAE6FD;
+    border-radius: 9px;
+    padding: 2.5px 8px;
+    font-size: 8px;
+    color: #0369A1;
+    font-weight: 500;
+  }
+
+  /* ---- experience ---- */
+  .exp { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #F1F5F9; }
+  .exp:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .exp-top {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2px;
+  }
+  .exp-role   { font-size: 10px; font-weight: 700; color: #0F172A; }
+  .exp-period {
+    font-size: 7.5px;
+    color: #64748B;
+    background: #F1F5F9;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 1px 7px;
+    white-space: nowrap;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    margin-left: 5px;
+  }
+  .exp-co-line {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 3px;
+  }
+  .exp-co     { font-size: 8px; color: #1D4ED8; font-weight: 600; }
+  .exp-domain {
+    font-size: 7px;
+    background: #EDE9FE;
+    color: #5B21B6;
+    border-radius: 6px;
+    padding: 1px 5px;
+    font-weight: 500;
+  }
+  .exp-ul { list-style: none; margin-bottom: 3px; }
+  .exp-ul li {
+    font-size: 8.5px;
+    color: #475569;
+    padding-left: 10px;
+    position: relative;
+    margin-bottom: 2px;
+    line-height: 1.55;
+  }
+  .exp-ul li::before {
+    content: "\25B8";
+    position: absolute;
+    left: 0;
+    color: #0EA5E9;
+    font-size: 7px;
+    top: 1.5px;
+  }
+
+  /* ---- tech tags ---- */
+  .tags {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin-top: 3px;
+  }
+  .tag {
+    background: #F8FAFC;
+    border: 1px solid #CBD5E1;
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-size: 7px;
+    color: #64748B;
+    font-weight: 500;
+  }
+
+  /* ---- project cards ---- */
+  .proj-grid {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .proj-card {
+    width: calc(50% - 4px);
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    padding: 8px;
+    border-left: 3px solid #22D3EE;
+  }
+  .proj-card.green { border-left-color: #10B981; }
+  .proj-name  { font-size: 9px; font-weight: 700; color: #0F172A; margin-bottom: 3px; }
+  .live-badge { font-size: 6.5px; color: #10B981; font-weight: 600; }
+  .proj-desc  { font-size: 7.5px; color: #64748B; line-height: 1.5; margin-bottom: 5px; }
+
+  /* ---- personal project spotlight ---- */
+  .spotlight {
+    background: #F0F9FF;
+    border: 1px solid #BAE6FD;
+    border-radius: 7px;
+    padding: 10px;
+  }
+
+  /* ---- footer ---- */
+  .cv-footer {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #E2E8F0;
+    padding-top: 8px;
+    margin-top: auto;
+  }
+  .ft { font-size: 7px; color: #94A3B8; }
+
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     PAGE 1
+════════════════════════════════════════ -->
+<div class="page">
+
+  <!-- ───── SIDEBAR ───── -->
+  <div class="sidebar">
+
+    <!-- Avatar -->
+    <div class="avatar-wrap">
+      <div class="avatar">
+        <!--
+          HOW TO REPLACE AVATAR:
+          1. Delete the <div class="avatar-placeholder">...</div> below
+          2. Add: <img src="your-photo.jpg">
+          That's it — the CSS handles sizing/cropping automatically.
+        -->
+        <div class="avatar-placeholder">
+          [Replace<br>with<br>Avatar]
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-num">5+</div>
+        <div class="stat-lbl">Years<br>Exp.</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">10+</div>
+        <div class="stat-lbl">Projects<br>Done</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">3+</div>
+        <div class="stat-lbl">Companies<br>/ Clients</div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="ss">
+      <div class="ss-title">Contact</div>
+      <div class="c-row">
+        <div class="c-icon">@</div>
+        <div class="c-val">kiniemboquenjerry@gmail.com</div>
+      </div>
+      <div class="c-row">
+        <div class="c-icon">T</div>
+        <div class="c-val">+84 985 363 602</div>
+      </div>
+      <div class="c-row">
+        <div class="c-icon">*</div>
+        <div class="c-val">Ha Noi City, Vietnam</div>
+      </div>
+      <div class="c-row">
+        <div class="c-icon">G</div>
+        <div class="c-val">github.com/uncleyellow</div>
+      </div>
+      <div class="c-row">
+        <div class="c-icon">W</div>
+        <div class="c-val">khanh.dev</div>
+      </div>
+    </div>
+
+    <!-- Frontend Skills -->
+    <div class="ss">
+      <div class="ss-title">Frontend</div>
+      <div class="pills">
+        <span class="pill">Angular</span>
+        <span class="pill">AngularJS</span>
+        <span class="pill">React</span>
+        <span class="pill">React Native</span>
+        <span class="pill">TypeScript</span>
+        <span class="pill">JavaScript</span>
+        <span class="pill">HTML / CSS</span>
+        <span class="pill">NgRx</span>
+        <span class="pill">UI / UX</span>
+      </div>
+    </div>
+
+    <!-- Backend -->
+    <div class="ss">
+      <div class="ss-title">Backend &amp; Tools</div>
+      <div class="pills">
+        <span class="pill">Node.js</span>
+        <span class="pill">Python</span>
+        <span class="pill">REST API</span>
+        <span class="pill">Microservices</span>
+        <span class="pill">SQL</span>
+        <span class="pill">Git</span>
+        <span class="pill">Figma</span>
+        <span class="pill">CI/CD</span>
+        <span class="pill">SonarQube</span>
+        <span class="pill">CMS</span>
+        <span class="pill">Agile</span>
+      </div>
+    </div>
+
+    <!-- AI -->
+    <div class="ss">
+      <div class="ss-title">AI / Automation</div>
+      <div class="pills">
+        <span class="pill">LLM Integration</span>
+        <span class="pill">Chatbot Dev</span>
+        <span class="pill">Biz Automation</span>
+        <span class="pill">Meta / TikTok API</span>
+        <span class="pill">Doc Processing</span>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="ss">
+      <div class="ss-title">Languages</div>
+      <div class="lang-item">
+        <div class="lang-row">
+          <span class="lang-name">English</span>
+          <span class="lang-lvl">B2 / IELTS ~6.5</span>
+        </div>
+        <div class="lang-bar"><div class="lang-fill" style="width:75%"></div></div>
+      </div>
+      <div class="lang-item">
+        <div class="lang-row">
+          <span class="lang-name">Vietnamese</span>
+          <span class="lang-lvl">Native</span>
+        </div>
+        <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+      </div>
+      <div class="lang-item">
+        <div class="lang-row">
+          <span class="lang-name">Japanese</span>
+          <span class="lang-lvl">JLPT N5</span>
+        </div>
+        <div class="lang-bar"><div class="lang-fill" style="width:22%"></div></div>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="ss">
+      <div class="ss-title">Certifications</div>
+      <div class="cert-item">
+        <div class="cert-name">IELTS ~6.5 (B2)</div>
+        <div class="cert-meta">English Proficiency · 2023</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">JLPT N5</div>
+        <div class="cert-meta">Japanese Proficiency · 2021</div>
+      </div>
+    </div>
+
+  </div><!-- /sidebar -->
+
+  <!-- ───── MAIN ───── -->
+  <div class="main">
+
+    <!-- Header -->
+    <div class="cv-header">
+      <div class="cv-name">Duong Dinh Khanh</div>
+      <div>
+        <span class="cv-badge">Frontend / Fullstack Developer</span>
+        <span class="cv-loc">Ha Noi City, Vietnam</span>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="sec">
+      <div class="sec-title">
+        <span class="sec-bar"></span>Professional Summary<span class="sec-line"></span>
+      </div>
+      <p class="summary">
+        Frontend / Fullstack Developer with <strong>5+ years</strong> delivering high-performance web and mobile
+        applications across aviation, banking/fintech, healthcare, telecom, and AI domains.
+        Deep expertise in <strong>Angular, React, TypeScript, and Node.js</strong> with a strong record of scalable
+        frontend architecture, CMS migration, and enterprise API integration. Trusted collaborator across QA, BA,
+        backend, and design teams — from requirement analysis to production release.
+      </p>
+    </div>
+
+    <!-- Core Strengths -->
+    <div class="sec">
+      <div class="sec-title">
+        <span class="sec-bar"></span>Core Strengths<span class="sec-line"></span>
+      </div>
+      <div class="strength-wrap">
+        <span class="sp">Enterprise Angular Architecture</span>
+        <span class="sp">CMS Platform Migration</span>
+        <span class="sp">API &amp; Third-Party Integration</span>
+        <span class="sp">Performance Optimization</span>
+        <span class="sp">Code Review Ownership</span>
+        <span class="sp">Cross-functional Collaboration</span>
+        <span class="sp">Clean Code &amp; Maintainability</span>
+        <span class="sp">LLM / AI Integration</span>
+        <span class="sp">Fullstack Product Delivery</span>
+        <span class="sp">Agile / Scrum</span>
+      </div>
+    </div>
+
+    <!-- Work Experience -->
+    <div class="sec">
+      <div class="sec-title">
+        <span class="sec-bar"></span>Work Experience<span class="sec-line"></span>
+      </div>
+
+      <!-- SmartOSC -->
+      <div class="exp">
+        <div class="exp-top">
+          <div class="exp-role">Frontend Developer</div>
+          <div class="exp-period">Jun 2025 — Jun 2026</div>
+        </div>
+        <div class="exp-co-line">
+          <span class="exp-co">SmartOSC — Cebu Pacific Air</span>
+          <span class="exp-domain">Aviation / Enterprise</span>
+        </div>
+        <ul class="exp-ul">
+          <li>Engineered enterprise Angular features for one of SEA's leading low-cost airline booking platforms.</li>
+          <li>Spearheaded CMS platform migration and integrated third-party booking, payment, and airline APIs.</li>
+          <li>Owned end-to-end code review pipeline and feature delivery in a high-stakes international client environment.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Angular</span><span class="tag">CMS Migration</span><span class="tag">REST API</span><span class="tag">TypeScript</span><span class="tag">Third-party Integrations</span>
+        </div>
+      </div>
+
+      <!-- Techcombank -->
+      <div class="exp">
+        <div class="exp-top">
+          <div class="exp-role">Frontend Developer</div>
+          <div class="exp-period">Jan 2024 — Jan 2025</div>
+        </div>
+        <div class="exp-co-line">
+          <span class="exp-co">Techcombank Dev</span>
+          <span class="exp-domain">Banking / Fintech</span>
+        </div>
+        <ul class="exp-ul">
+          <li>Built enterprise bidding and contract management systems for internal banking operations.</li>
+          <li>Implemented scalable Angular + NgRx architecture with measurable performance and stability gains.</li>
+          <li>Led refactoring initiatives elevating code quality, Sonar scores, and long-term maintainability.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Angular</span><span class="tag">NgRx</span><span class="tag">TypeScript</span><span class="tag">REST API</span><span class="tag">SonarQube</span>
+        </div>
+      </div>
+
+      <!-- Aratech -->
+      <div class="exp">
+        <div class="exp-top">
+          <div class="exp-role">Frontend Developer</div>
+          <div class="exp-period">Jan 2021 — Jan 2023</div>
+        </div>
+        <div class="exp-co-line">
+          <span class="exp-co">Aratech</span>
+          <span class="exp-domain">Healthcare / Telecom</span>
+        </div>
+        <ul class="exp-ul">
+          <li>Developed Angular / AngularJS applications for Hospital LIS and Viettel contract management platforms.</li>
+          <li>Optimized UI, responsiveness, and component architecture; directly engaged clients to clarify requirements.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Angular</span><span class="tag">AngularJS</span><span class="tag">SQL</span><span class="tag">Microservices</span>
+        </div>
+      </div>
+
+      <!-- Freelance -->
+      <div class="exp">
+        <div class="exp-top">
+          <div class="exp-role">Freelance Fullstack Developer</div>
+          <div class="exp-period">2021 — Present</div>
+        </div>
+        <div class="exp-co-line">
+          <span class="exp-co">Independent</span>
+          <span class="exp-domain">Fullstack / AI</span>
+        </div>
+        <ul class="exp-ul">
+          <li>Delivered end-to-end fullstack solutions (Angular + Python) integrating LLM / AI for business automation.</li>
+          <li>Built Meta Ads automation platform (Facebook + TikTok APIs) and a React Native Japanese learning app.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Angular</span><span class="tag">Python</span><span class="tag">React Native</span><span class="tag">Meta API</span><span class="tag">LLM</span>
+        </div>
+      </div>
+
+    </div><!-- /experience section -->
+
+  </div><!-- /main -->
+</div><!-- /page 1 -->
+
+
+<!-- ════════════════════════════════════════
+     PAGE 2
+════════════════════════════════════════ -->
+<div class="page">
+
+  <!-- ───── SIDEBAR PAGE 2 ───── -->
+  <div class="sidebar">
+
+    <div class="ss">
+      <div class="ss-title">Dev Workflow</div>
+      <div class="wf-row"><span class="wf-num">01</span><span class="wf-text">Requirement Analysis</span></div>
+      <div class="wf-row"><span class="wf-num">02</span><span class="wf-text">User Story Breakdown</span></div>
+      <div class="wf-row"><span class="wf-num">03</span><span class="wf-text">API Contract Alignment</span></div>
+      <div class="wf-row"><span class="wf-num">04</span><span class="wf-text">Reusable Component Build</span></div>
+      <div class="wf-row"><span class="wf-num">05</span><span class="wf-text">API Integration &amp; Optimize</span></div>
+      <div class="wf-row"><span class="wf-num">06</span><span class="wf-text">Unit Testing</span></div>
+      <div class="wf-row"><span class="wf-num">07</span><span class="wf-text">PR &amp; Code Review</span></div>
+      <div class="wf-row"><span class="wf-num">08</span><span class="wf-text">Sonar / Code Quality</span></div>
+      <div class="wf-row"><span class="wf-num">09</span><span class="wf-text">Production Delivery</span></div>
+    </div>
+
+    <div class="ss">
+      <div class="ss-title">Interests</div>
+      <div style="font-size:8px;color:#94A3B8;line-height:2;">
+        Basketball &nbsp;|&nbsp; Guitar &nbsp;|&nbsp; Gaming
+      </div>
+    </div>
+
+    <!-- Live project highlight -->
+    <div class="live-box">
+      <div class="live-label">* Live Project</div>
+      <div class="live-pname">Driving School<br>Management System</div>
+      <div class="live-url">hoclaixe-hieukhanh.vercel.app</div>
+    </div>
+    <div class="live-box">
+      <div class="live-label">* Live Project</div>
+      <div class="live-pname">Driving School<br>Management System</div>
+      <div class="live-url">hoclaixe-hieukhanh.vercel.app</div>
+    </div>
+    <div class="live-box">
+      <div class="live-label">* Live Project</div>
+      <div class="live-pname">Driving School<br>Management System</div>
+      <div class="live-url">hoclaixe-hieukhanh.vercel.app</div>
+    </div>
+    <div class="live-box">
+      <div class="live-label">* Live Project</div>
+      <div class="live-pname">Driving School<br>Management System</div>
+      <div class="live-url">hoclaixe-hieukhanh.vercel.app</div>
+    </div>
+
+    <!-- Sidebar bottom -->
+    <div class="sb-footer">
+      <span>Duong Dinh Khanh</span><br>
+      Frontend / Fullstack Developer<br>
+      Ha Noi, Vietnam
+    </div>
+
+  </div><!-- /sidebar p2 -->
+
+  <!-- ───── MAIN PAGE 2 ───── -->
+  <div class="main">
+
+    <!-- Featured Projects -->
+    <div class="sec">
+      <div class="sec-title">
+        <span class="sec-bar"></span>Featured Projects<span class="sec-line"></span>
+      </div>
+
+      <div class="proj-grid">
+
+        <div class="proj-card">
+          <div class="proj-name">Cebu Pacific Air Platform</div>
+          <div class="proj-desc">Enterprise booking &amp; CMS system for one of SEA's largest low-cost airlines — third-party API integrations, scalable Angular architecture.</div>
+          <div class="tags"><span class="tag">Angular</span><span class="tag">CMS</span><span class="tag">REST API</span></div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-name">Hospital LIS System</div>
+          <div class="proj-desc">Lab information system with complex data workflows, role-based access, and real-time lab result management for hospital operations.</div>
+          <div class="tags"><span class="tag">Angular</span><span class="tag">REST API</span><span class="tag">SQL</span></div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-name">Viettel Contract Manager</div>
+          <div class="proj-desc">Internal contract lifecycle platform for Vietnam's largest telecom — microservices architecture with multi-level approval workflows.</div>
+          <div class="tags"><span class="tag">Angular</span><span class="tag">Microservices</span></div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-name">Japanese Learning App</div>
+          <div class="proj-desc">Cross-platform mobile app — spaced repetition, kanji drills, vocabulary sets, and progress tracking for Japanese learners.</div>
+          <div class="tags"><span class="tag">React Native</span><span class="tag">Python</span></div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-name">Meta Ads Automation Platform</div>
+          <div class="proj-desc">Business automation platform using Facebook and TikTok APIs for campaign management, analytics, and lead generation.</div>
+          <div class="tags"><span class="tag">Angular</span><span class="tag">Python</span><span class="tag">Meta API</span></div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-name">AI Integration Projects</div>
+          <div class="proj-desc">Multiple client projects integrating LLMs into web apps — intelligent chatbots and document processing/workflow automation pipelines.</div>
+          <div class="tags"><span class="tag">Python</span><span class="tag">LLM</span><span class="tag">Angular</span></div>
+        </div>
+
+        <div class="proj-card green" style="width:100%;">
+          <div class="proj-name">
+            Driving School Management System
+            <span class="live-badge"> LIVE IN PRODUCTION</span>
+          </div>
+          <div class="proj-desc">Fullstack platform for driving school ops — student management, lesson tracking, internal exams, progress analytics, and RBAC for Admin / Student / Guest. Actively serving real users in production.</div>
+          <div class="tags"><span class="tag">Angular</span><span class="tag">Python</span><span class="tag">Node.js</span><span class="tag">REST API</span><span class="tag">Vercel</span><span class="tag">Fullstack</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Personal Project Spotlight -->
+    <div class="sec">
+      <div class="sec-title">
+        <span class="sec-bar"></span>Personal Project — Fullstack Developer<span class="sec-line"></span>
+      </div>
+
+      <div class="spotlight">
+        <div class="exp-top" style="margin-bottom:2px;">
+          <div class="exp-role">Driving School Management System</div>
+          <div class="exp-period">2025 — Present</div>
+        </div>
+        <div class="exp-co-line">
+          <span class="exp-co">Self-directed · Live on Vercel</span>
+          <span class="exp-domain">Fullstack / Real Users</span>
+        </div>
+        <ul class="exp-ul">
+          <li>Designed and built a fullstack driving school platform from scratch — requirement analysis to production deployment on Vercel.</li>
+          <li>Implemented RBAC (Admin / Student / Guest), student lifecycle management, lesson scheduling, internal exam engine, and progress tracking.</li>
+          <li>Actively maintains and iterates on a live production system with real users, handling all DevOps and feature ownership solo.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Angular</span><span class="tag">Python</span><span class="tag">Node.js</span><span class="tag">REST API</span><span class="tag">Vercel</span><span class="tag">Fullstack Architecture</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="margin-top:12px;">
+      <div class="cv-footer">
+        <div class="ft">Duong Dinh Khanh &nbsp;·&nbsp; Frontend / Fullstack Developer &nbsp;·&nbsp; Ha Noi, Vietnam</div>
+        <div class="ft">kiniemboquenjerry@gmail.com &nbsp;·&nbsp; +84 985 363 602 &nbsp;·&nbsp; github.com/uncleyellow</div>
+      </div>
+    </div>
+
+  </div><!-- /main p2 -->
+</div><!-- /page 2 -->
+
+</body>
+</html>
