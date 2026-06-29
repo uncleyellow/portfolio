@@ -28,7 +28,7 @@
     "skill.node": "Node.js / Backend",
     "exp.tag": "Where I've Been",
     "exp.title": "Work Experience",
-    "exp.sub": "Building production software across fintech, aviation, and healthcare.",
+    "exp.sub": "Building production software across fintech, aviation, healthcare, logistics, and AI automation.",
     "exp.current": "Current",
     "exp1.role": "Frontend Developer",
     "exp1.b1": "Enterprise Angular development + CMS platform migration",
@@ -57,6 +57,12 @@
     "exp5.b2": "Implemented role-based access control (Admin, Student, Guest)",
     "exp5.b3": "Built learning workflows and internal examination system",
     "exp5.b4": "Deployed and maintained production system on Vercel with real users",
+    "exp6.role": "AI / Fullstack Developer",
+"exp6.company": "RATRACO",
+"exp6.b1": "Built AI-powered enterprise applications for logistics and container operations.",
+"exp6.b2": "Developed container temperature monitoring workflows to support operational tracking and business automation.",
+"exp6.b3": "Implemented license plate recognition from RTSP camera streams using YOLOv8 and AI-assisted processing.",
+"exp6.b4": "Delivered frontend modules with Angular and backend services with Node.js, integrating AI tools such as Ollama.",
     "proj.tag": "What I've Built",
     "proj.title": "Featured Projects",
     "proj.sub": "Production systems across aviation, healthcare, telecoms, and education.",
@@ -101,6 +107,26 @@
     "about.desc2": "Specialized in Angular, React, and modern JavaScript ecosystems, with strong experience in API integration and system architecture.",
     "about.desc3": "I enjoy solving real-world problems and building meaningful products that deliver value to users.",
     "about.exp": "Experience",
+"about.timeline.2021.title": "Started Professional Development",
+"about.timeline.2021.desc": "Began working as a frontend developer, focusing on Angular, AngularJS, HTML/CSS, JavaScript, and enterprise UI development.",
+
+"about.timeline.aratech.title": "Aratech — Frontend Developer",
+"about.timeline.aratech.desc": "Developed enterprise applications for healthcare and telecom domains, including Hospital LIS systems and Viettel contract management platforms. Worked on complex data workflows, role-based access, responsive UI, and performance optimization.",
+
+"about.timeline.freelance.title": "Freelance Fullstack Developer",
+"about.timeline.freelance.desc": "Delivered end-to-end freelance solutions using Angular, Python, React Native, and third-party APIs. Built business automation tools, Meta Ads integrations, AI/LLM-powered workflows, and a Japanese learning mobile application.",
+
+"about.timeline.techcombank.title": "Techcombank — Frontend Developer",
+"about.timeline.techcombank.desc": "Built enterprise bidding and contract management systems for internal banking operations. Implemented scalable Angular and NgRx architecture, improved application performance, supported refactoring, and enhanced long-term maintainability through code quality practices.",
+
+"about.timeline.ratraco.title": "RATRACO — AI / Fullstack Developer",
+"about.timeline.ratraco.desc": "Applied AI to enterprise logistics operations, including container temperature monitoring, RTSP camera processing, and license plate recognition. Built Angular frontend modules and Node.js backend services, integrating YOLOv8 and Ollama to support automation workflows.",
+
+"about.timeline.driving.title": "Driving School Management System",
+"about.timeline.driving.desc": "Designed and built a fullstack production platform for driving school operations. Implemented student management, lesson tracking, internal exams, progress analytics, RBAC, deployment, and production maintenance independently.",
+
+"about.timeline.smartosc.title": "SmartOSC — Cebu Pacific Air",
+"about.timeline.smartosc.desc": "Joined an international aviation project for Cebu Pacific Air. Focused on enterprise Angular development, CMS migration, third-party API integration, booking-related workflows, code review, and production-quality feature delivery.",
     "about.projects": "Delivered",
     "about.clients": "Clients",
     "about.focus": "Focus",

@@ -28,7 +28,7 @@
     "skills.cat4": "Review code",
     "exp.tag": "Kinh nghiệm làm việc",
     "exp.title": "Lịch sử công tác",
-    "exp.sub": "Xây dựng phần mềm thực tế trong lĩnh vực hàng không, y tế và viễn thông.",
+    "exp.sub": "Phát triển phần mềm sản xuất cho các lĩnh vực fintech, hàng không, chăm sóc sức khỏe, logistics và tự động hóa AI.",
     "exp.current": "Hiện tại",
     "exp1.role": "Lập trình viên Frontend",
     "exp1.b1": "Phát triển Angular enterprise + migration hệ thống CMS",
@@ -57,6 +57,12 @@
     "exp5.b2": "Xây dựng cơ chế phân quyền (Admin, Student, Guest)",
     "exp5.b3": "Phát triển luồng học tập và hệ thống thi nội bộ",
     "exp5.b4": "Triển khai và vận hành hệ thống thực tế trên Vercel với người dùng thật",
+    "exp6.role": "AI / Fullstack Developer",
+"exp6.company": "RATRACO",
+"exp6.b1": "Xây dựng các ứng dụng doanh nghiệp tích hợp AI cho lĩnh vực logistics và vận hành container.",
+"exp6.b2": "Phát triển luồng giám sát nhiệt độ container nhằm hỗ trợ theo dõi vận hành và tự động hóa nghiệp vụ.",
+"exp6.b3": "Triển khai nhận diện biển số từ luồng camera RTSP sử dụng YOLOv8 và xử lý AI.",
+"exp6.b4": "Phát triển các module frontend bằng Angular và backend service bằng Node.js, tích hợp các công cụ AI như Ollama.",
     "p7.title": "Hệ thống quản lý đào tạo lái xe",
     "p7.desc": "Nền tảng web fullstack quản lý trung tâm đào tạo lái xe: quản lý học viên, bài học, thi nội bộ và theo dõi tiến độ với phân quyền Admin / Student / Guest.",
     "proj.tag": "Tôi đã xây dựng",
@@ -95,6 +101,26 @@
     "about.desc2": "Chuyên về Angular, React và hệ sinh thái JavaScript hiện đại, có kinh nghiệm tích hợp API và thiết kế hệ thống.",
     "about.desc3": "Tôi thích giải quyết vấn đề thực tế và xây dựng các sản phẩm mang lại giá trị cho người dùng.",
     "about.exp": "Kinh nghiệm",
+"about.timeline.2021.title": "Bắt đầu phát triển chuyên nghiệp",
+"about.timeline.2021.desc": "Bắt đầu làm việc với vai trò frontend developer, tập trung vào Angular, AngularJS, HTML/CSS, JavaScript và phát triển giao diện cho hệ thống doanh nghiệp.",
+
+"about.timeline.aratech.title": "Aratech — Frontend Developer",
+"about.timeline.aratech.desc": "Phát triển các ứng dụng doanh nghiệp trong lĩnh vực y tế và viễn thông, bao gồm hệ thống Hospital LIS và nền tảng quản lý hợp đồng Viettel. Làm việc với luồng dữ liệu phức tạp, phân quyền người dùng, giao diện responsive và tối ưu hiệu năng.",
+
+"about.timeline.freelance.title": "Freelance Fullstack Developer",
+"about.timeline.freelance.desc": "Triển khai các giải pháp freelance end-to-end bằng Angular, Python, React Native và API bên thứ ba. Xây dựng công cụ tự động hóa doanh nghiệp, tích hợp Meta Ads, workflow AI/LLM và ứng dụng học tiếng Nhật trên mobile.",
+
+"about.timeline.techcombank.title": "Techcombank — Frontend Developer",
+"about.timeline.techcombank.desc": "Xây dựng hệ thống đấu thầu và quản lý hợp đồng cho vận hành nội bộ ngân hàng. Triển khai kiến trúc Angular và NgRx có khả năng mở rộng, cải thiện hiệu năng ứng dụng, hỗ trợ refactor và nâng cao khả năng bảo trì thông qua tiêu chuẩn chất lượng code.",
+
+"about.timeline.ratraco.title": "RATRACO — AI / Fullstack Developer",
+"about.timeline.ratraco.desc": "Ứng dụng AI vào vận hành logistics doanh nghiệp, bao gồm giám sát nhiệt độ container, xử lý camera RTSP và nhận diện biển số. Xây dựng module frontend bằng Angular và backend service bằng Node.js, tích hợp YOLOv8 và Ollama để hỗ trợ tự động hóa quy trình.",
+
+"about.timeline.driving.title": "Driving School Management System",
+"about.timeline.driving.desc": "Thiết kế và xây dựng nền tảng fullstack production cho vận hành trung tâm đào tạo lái xe. Triển khai quản lý học viên, theo dõi buổi học, thi nội bộ, phân tích tiến độ, RBAC, deployment và bảo trì production độc lập.",
+
+"about.timeline.smartosc.title": "SmartOSC — Cebu Pacific Air",
+"about.timeline.smartosc.desc": "Tham gia dự án hàng không quốc tế cho Cebu Pacific Air. Tập trung phát triển Angular enterprise, migration CMS, tích hợp API bên thứ ba, workflow liên quan đặt vé, code review và bàn giao feature đạt chất lượng production.",
     "about.projects": "Dự án",
     "about.clients": "Khách hàng",
     "about.focus": "Chuyên môn",

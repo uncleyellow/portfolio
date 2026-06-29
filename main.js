@@ -391,6 +391,9 @@ const io = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal, .timeline-item, .project-card')
     .forEach(el => io.observe(el));
 
+document.querySelectorAll('.reveal, .timeline-item, .timeline-item2, .project-card')
+    .forEach(el => io.observe(el));
+
 // 👉 ✅ THÊM NGAY DƯỚI ĐÂY
 document.querySelectorAll('.case-item')
     .forEach(el => io.observe(el));
