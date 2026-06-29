@@ -1,1719 +1,2088 @@
 <!DOCTYPE html>
 <html lang="en">
-   
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"
-      />
-      <meta name="description" content="Portfolio of Duong Dinh Khanh, a Frontend and Fullstack Developer with 5+ years of experience in Angular, React, TypeScript, Python, Node.js, and AI-powered web applications">
-      <meta name="keywords" content="Frontend Developer, Angular, React, Python, Portfolio">
-      <meta name="author" content="Duong Dinh Khanh">
-      
-      <meta property="og:title" content="Duong Dinh Khanh | Frontend & Fullstack Developer">
-      <meta property="og:description" content="Frontend and Fullstack Developer specializing in Angular, React, TypeScript, Python, Node.js, and AI-powered applications">
-      <meta property="og:image" content="./assets/img/avatar.jpg">
-      <meta property="og:type" content="website">
-
-      <!-- Twitter / X Card -->
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Duong Dinh Khanh | Frontend & Fullstack Developer" />
-      <meta
-         name="twitter:description"
-         content="Frontend and Fullstack Developer specializing in Angular, React, TypeScript, Python, Node.js, and AI-powered applications."
-      />
-      <meta name="twitter:image" content="https://uncleyellow.github.io/portfolio/assets/img/avatar.jpg" />
-      
-      <!-- Theme -->
-      <meta name="theme-color" content="#0B1629" />
-
-      <title>
-         Duong Dinh Khanh | Frontend & Fullstack Developer
-      </title>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-      <link rel="stylesheet" href="./assets/css/main.css">
-      <link rel="icon" href="./assets/img/favicon.png">
-      
-      <!-- Structured Data -->
-      <script type="application/ld+json">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    />
+    <meta name="description" content="Portfolio of Duong Dinh Khanh, a Frontend and Fullstack Developer with 5+ years of experience in Angular, React, TypeScript, Python, Node.js, and AI-powered web applications">
+    <meta name="keywords" content="Frontend Developer, Angular, React, Python, Portfolio">
+    <meta name="author" content="Duong Dinh Khanh">
+    <meta property="og:title" content="Duong Dinh Khanh | Frontend & Fullstack Developer">
+    <meta property="og:description" content="Frontend and Fullstack Developer specializing in Angular, React, TypeScript, Python, Node.js, and AI-powered applications">
+    <meta property="og:image" content="./assets/img/avatar.jpg">
+    <meta property="og:type" content="website">
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Duong Dinh Khanh | Frontend & Fullstack Developer"
+    />
+    <meta name="twitter:description" content="Frontend and Fullstack Developer specializing in Angular, React, TypeScript, Python, Node.js, and AI-powered applications."
+    />
+    <meta name="twitter:image" content="https://uncleyellow.github.io/portfolio/assets/img/avatar.jpg"
+    />
+    <!-- Theme -->
+    <meta name="theme-color" content="#0B1629" />
+    <title>
+      Duong Dinh Khanh | Frontend & Fullstack Developer
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="icon" href="./assets/img/favicon.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
       {
-         "@context": "https://schema.org",
-         "@type": "Person",
-         "name": "Duong Dinh Khanh",
-         "jobTitle": "Frontend / Fullstack Developer",
-         "url": "https://uncleyellow.github.io/portfolio/",
-         "image": "https://uncleyellow.github.io/portfolio/assets/img/avatar.jpg",
-         "email": "mailto:kiniemboquenjerry@gmail.com",
-         "telephone": "+84 985 363 602",
-         "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Ha Noi",
-            "addressCountry": "VN"
-         },
-         "sameAs": [
-            "https://github.com/uncleyellow"
-         ],
-         "knowsAbout": [
-            "Angular",
-            "React",
-            "TypeScript",
-            "JavaScript",
-            "Python",
-            "Node.js",
-            "Frontend Development",
-            "Fullstack Development",
-            "AI Integration",
-            "REST API"
-         ]
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Duong Dinh Khanh",
+        "jobTitle": "Frontend / Fullstack Developer",
+        "url": "https://uncleyellow.github.io/portfolio/",
+        "image": "https://uncleyellow.github.io/portfolio/assets/img/avatar.jpg",
+        "email": "mailto:kiniemboquenjerry@gmail.com",
+        "telephone": "+84 985 363 602",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ha Noi",
+          "addressCountry": "VN"
+        },
+        "sameAs": ["https://github.com/uncleyellow"],
+        "knowsAbout": ["Angular", "React", "TypeScript", "JavaScript", "Python", "Node.js", "Frontend Development", "Fullstack Development", "AI Integration", "REST API"]
       }
-      </script>
-   </head>
-   
-   <body>
-      <div id="progressBar"></div>
-      <!-- ✅ MÀN CHÀO ĐEN – ĐẶT NGAY ĐẦU BODY -->
-      <div id="introScreen" class="intro-screen" aria-hidden="false">
-         <div id="introGreeting" class="intro-greeting"></div>
+    </script>
+  </head>
+  
+  <body>
+    <div id="progressBar">
+    </div>
+    <!-- ✅ MÀN CHÀO ĐEN – ĐẶT NGAY ĐẦU BODY -->
+    <div id="introScreen" class="intro-screen" aria-hidden="false">
+      <div id="introGreeting" class="intro-greeting">
       </div>
-      <div id="orb">
-      </div>
-      <!-- NAV -->
-      <nav id="navbar">
-         <a class="nav-logo" href="#hero">
-            <span>
-               &lt;/&gt;
-            </span>
-            Khanh.dev
-         </a>
-         <ul class="nav-links">
-            <li>
-               <a href="#skills" data-i18n="nav.skills">
-                  Skills
-               </a>
-            </li>
-            <li>
-               <a href="#experience" data-i18n="nav.experience">
-                  Experience
-               </a>
-            </li>
-            <li>
-               <a href="#projects" data-i18n="nav.projects">
-                  Projects
-               </a>
-            </li>
-            <li>
-               <a href="#contact" class="nav-cta" data-i18n="nav.hire">
-                  Hire Me
-               </a>
-            </li>
-         </ul>
-         <div class="nav-right">
-            <div class="lang-toggle">
-               <button class="lang-btn active" onclick="setLang('en')">
-                  EN
-               </button>
-               <button class="lang-btn" onclick="setLang('vi')">
-                  VI
-               </button>
-            </div>
-            <div class="hamburger" id="hamburger">
-               <span>
-               </span>
-               <span>
-               </span>
-               <span>
-               </span>
-            </div>
-         </div>
-      </nav>
-      <div class="mobile-menu" id="mobileMenu">
-         <a href="#skills" onclick="closeMobile()" data-i18n="nav.skills">
+    </div>
+    <div id="orb">
+    </div>
+    <!-- NAV -->
+    <nav id="navbar">
+      <a class="nav-logo" href="#hero">
+        <span>
+          &lt;/&gt;
+        </span>
+        Khanh.dev
+      </a>
+      <ul class="nav-links">
+        <li>
+          <a href="#skills" data-i18n="nav.skills">
             Skills
-         </a>
-         <a href="#experience" onclick="closeMobile()" data-i18n="nav.experience">
+          </a>
+        </li>
+        <li>
+          <a href="#experience" data-i18n="nav.experience">
             Experience
-         </a>
-         <a href="#projects" onclick="closeMobile()" data-i18n="nav.projects">
+          </a>
+        </li>
+        <li>
+          <a href="#projects" data-i18n="nav.projects">
             Projects
-         </a>
-         <a href="#more" onclick="closeMobile()" data-i18n="nav.certs">
-            Certifications
-         </a>
-         <a href="#contact" onclick="closeMobile()" style="color:var(--accent)"
-         data-i18n="nav.hire_arrow">
-            Hire Me →
-         </a>
-         <div class="mobile-lang">
-            <button class="lang-btn active" onclick="setLang('en')">
-               EN
-            </button>
-            <button class="lang-btn" onclick="setLang('vi')">
-               VI
-            </button>
-         </div>
-      </div>
-      <!-- HERO -->
-      <section id="hero">
-         <div class="container">
-            <div class="hero-inner">
-               <div class="hero-content">
-                  <div class="hero-eyebrow">
-                     <span class="dot">
-                     </span>
-                     <span data-i18n="hero.available">
-                        Available for opportunities
-                     </span>
-                  </div>
-                  <h1 class="hero-name">
-                     <span>Duong Dinh Khanh</span>
-                     <span data-i18n="hero.title1">
-                        Frontend &
-                     </span>
-                     <br>
-                     <span class="accent">
-                        Fullstack
-                     </span>
-                     <br>
-                     <span data-i18n="hero.title2">
-                        Developer
-                     </span>
-                  </h1>
-                  <p class="hero-title">
-                     <span id="typewriter">
-                     </span>
-                     <span class="cursor">
-                     </span>
-                  </p>
-                  <p class="hero-desc" data-i18n="hero.desc">
-                     5+ years crafting high-performance web & mobile experiences. Specialized
-                     in Angular, React, and Python — from pixel-perfect UIs to robust backend
-                     integrations.
-                  </p>
-                  <div class="hero-actions">
-                     <a href="#projects" class="btn-primary">
-                        <span data-i18n="hero.cta1">
-                           View My Work
-                        </span>
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                           <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5"
-                           stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                     </a>
-                     <a href="#contact" class="btn-secondary" data-i18n="hero.cta2">
-                        Get In Touch
-                     </a>
-                  </div>
-                  <div class="hero-stats">
-                     <div class="stat-item">
-                        <div class="stat-number">
-                           5+
-                        </div>
-                        <div class="stat-label" data-i18n="hero.stat1">
-                           Years Exp.
-                        </div>
-                     </div>
-                     <div class="stat-item">
-                        <div class="stat-number">
-                           10+
-                        </div>
-                        <div class="stat-label" data-i18n="hero.stat2">
-                           Projects
-                        </div>
-                     </div>
-                     <div class="stat-item">
-                        <div class="stat-number">
-                           5+
-                        </div>
-                        <div class="stat-label" data-i18n="hero.stat3">
-                           Companies
-                        </div>
-                     </div>
-                     <div class="stat-item">
-                        <div class="stat-number">
-                           B2
-                        </div>
-                        <div class="stat-label" data-i18n="hero.stat4">
-                           English
-                        </div>
-                     </div>
-                     <div class="stat-item">
-                        <div class="stat-number">
-                           N4
-                        </div>
-                        <div class="stat-label" data-i18n="hero.stat5">
-                           Japanese
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="hero-avatar-card">
-                  <div class="avatar-bg">
-                     <img src="./assets/img/avatar.jpg" alt="avatar" class="avatar-img" loading="lazy"/>
-                     <div class="avatar-name-label" data-i18n="hero.avatar_role">
-                        Frontend Developer
-                     </div>
-                     <div class="avatar-role-label" data-i18n="hero.avatar_loc">
-                        Ha Noi City, Vietnam
-                     </div>
-                     <div class="avatar-badges">
-                        <span class="badge">
-                           Angular
-                        </span>
-                        <span class="badge">
-                           React
-                        </span>
-                        <span class="badge">
-                           Python
-                        </span>
-                        <span class="badge">
-                           TypeScript
-                        </span>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- SKILLS -->
-      <section id="skills">
-         <div class="container">
-            <div class="section-header reveal">
-               <div class="section-tag" data-i18n="skills.tag">
-                  What I Do
-               </div>
-               <h2 class="section-title-main" data-i18n="skills.title">
-                  Technical Skills
-               </h2>
-               <p class="section-subtitle" data-i18n="skills.sub">
-                  A focused stack built through years of real-world delivery.
-               </p>
-            </div>
-            <div class="skills-grid">
-               <div class="skill-card reveal">
-                  <div class="skill-header">
-                     <div class="skill-name">
-                        <span class="skill-icon">
-                           🅰️
-                        </span>
-                        Angular
-                     </div>
-                     <span class="skill-pct">
-                        95%
-                     </span>
-                  </div>
-                  <div class="skill-track">
-                     <div class="skill-fill" data-width="95">
-                     </div>
-                  </div>
-               </div>
-               <div class="skill-card reveal">
-                  <div class="skill-header">
-                     <div class="skill-name">
-                        <span class="skill-icon">
-                           ⚛️
-                        </span>
-                        React / React Native
-                     </div>
-                     <span class="skill-pct">
-                        90%
-                     </span>
-                  </div>
-                  <div class="skill-track">
-                     <div class="skill-fill" data-width="90">
-                     </div>
-                  </div>
-               </div>
-               <div class="skill-card reveal">
-                  <div class="skill-header">
-                     <div class="skill-name">
-                        <span class="skill-icon">
-                           🟢
-                        </span>
-                        <span data-i18n="skill.node">
-                        </span>
-                     </div>
-                     <span class="skill-pct">
-                        85%
-                     </span>
-                  </div>
-                  <div class="skill-track">
-                     <div class="skill-fill" data-width="85">
-                     </div>
-                  </div>
-               </div>
-               <div class="skill-card reveal">
-                  <div class="skill-header">
-                     <div class="skill-name">
-                        <span class="skill-icon">
-                           💛
-                        </span>
-                        JavaScript / TypeScript
-                     </div>
-                     <span class="skill-pct">
-                        95%
-                     </span>
-                  </div>
-                  <div class="skill-track">
-                     <div class="skill-fill" data-width="95">
-                     </div>
-                  </div>
-               </div>
-               <div class="skill-card reveal">
-                  <div class="skill-header">
-                     <div class="skill-name">
-                        <span class="skill-icon">
-                           🎨
-                        </span>
-                        HTML / CSS / UI
-                     </div>
-                     <span class="skill-pct">
-                        95%
-                     </span>
-                  </div>
-                  <div class="skill-track">
-                     <div class="skill-fill" data-width="95">
-                     </div>
-                  </div>
-               </div>
-               <div class="skill-card reveal">
-                  <div class="skill-header">
-                     <div class="skill-name">
-                        <span class="skill-icon">
-                           🐍
-                        </span>
-                        Python
-                     </div>
-                     <span class="skill-pct">
-                        80%
-                     </span>
-                  </div>
-                  <div class="skill-track">
-                     <div class="skill-fill" data-width="80">
-                     </div>
-                  </div>
-               </div>
-               <div class="skill-card reveal">
-                  <div class="skill-header">
-                     <div class="skill-name">
-                        <span class="skill-icon">
-                           🗄️
-                        </span>
-                        SQL / Microservices
-                     </div>
-                     <span class="skill-pct">
-                        75%
-                     </span>
-                  </div>
-                  <div class="skill-track">
-                     <div class="skill-fill" data-width="75">
-                     </div>
-                  </div>
-               </div>
-               <div class="skill-card reveal">
-                  <div class="skill-header">
-                     <div class="skill-name">
-                        <span class="skill-icon">
-                           📓
-                        </span>
-                        MongoDB
-                     </div>
-                     <span class="skill-pct">
-                        80%
-                     </span>
-                  </div>
-                  <div class="skill-track">
-                     <div class="skill-fill" data-width="80">
-                     </div>
-                  </div>
-               </div>
-               <div class="skill-card reveal">
-                  <div class="skill-header">
-                     <div class="skill-name">
-                        <span class="skill-icon">
-                           👁️
-                        </span>
-                        YOLOv8 / Computer Vision
-                     </div>
-                     <span class="skill-pct">
-                        78%
-                     </span>
-                  </div>
-                  <div class="skill-track">
-                     <div class="skill-fill" data-width="78">
-                     </div>
-                  </div>
-               </div>
-
-               <div class="skill-card reveal">
-                  <div class="skill-header">
-                     <div class="skill-name">
-                        <span class="skill-icon">
-                           🧠
-                        </span>
-                        Ollama / Local LLM
-                     </div>
-                     <span class="skill-pct">
-                        80%
-                     </span>
-                  </div>
-                  <div class="skill-track">
-                     <div class="skill-fill" data-width="80">
-                     </div>
-                  </div>
-               </div>
-
-               <div class="skill-card reveal">
-                  <div class="skill-header">
-                     <div class="skill-name">
-                        <span class="skill-icon">
-                           🎥
-                        </span>
-                        RTSP Camera Processing
-                     </div>
-                     <span class="skill-pct">
-                        75%
-                     </span>
-                  </div>
-                  <div class="skill-track">
-                     <div class="skill-fill" data-width="75">
-                     </div>
-                  </div>
-               </div>
-
-               <div class="skill-card reveal">
-                  <div class="skill-header">
-                     <div class="skill-name">
-                        <span class="skill-icon">
-                           🐳
-                        </span>
-                        Docker / Deployment
-                     </div>
-                     <span class="skill-pct">
-                        78%
-                     </span>
-                  </div>
-                  <div class="skill-track">
-                     <div class="skill-fill" data-width="78">
-                     </div>
-                  </div>
-               </div>
-               <div class="skill-card reveal">
-                  <div class="skill-header">
-                     <div class="skill-name">
-                        <span class="skill-icon">
-                           🖌️
-                        </span>
-                        UI/UX / Figma
-                     </div>
-                     <span class="skill-pct">
-                        85%
-                     </span>
-                  </div>
-                  <div class="skill-track">
-                     <div class="skill-fill" data-width="85">
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="skill-cats reveal" style="transition-delay:0.2s">
-               <div class="skill-cat-card">
-                  <span class="skill-cat-icon">
-                     🤖
-                  </span>
-                  <div>
-                     <div class="skill-cat-label" data-i18n="skills.cat1">
-                        AI Integration
-                     </div>
-                     <div class="skill-cat-sub">
-                        LLM · Chatbot · Automation
-                     </div>
-                  </div>
-               </div>
-               <div class="skill-cat-card">
-                  <span class="skill-cat-icon">
-                     📱
-                  </span>
-                  <div>
-                     <div class="skill-cat-label" data-i18n="skills.cat2">
-                        Mobile Dev
-                     </div>
-                     <div class="skill-cat-sub">
-                        React Native · Cross-platform
-                     </div>
-                  </div>
-               </div>
-               <div class="skill-cat-card">
-                  <span class="skill-cat-icon">
-                     🔗
-                  </span>
-                  <div>
-                     <div class="skill-cat-label" data-i18n="skills.cat3">
-                        API & CMS
-                     </div>
-                     <div class="skill-cat-sub">
-                        REST · Third-party · Migration
-                     </div>
-                  </div>
-               </div>
-               <div class="skill-cat-card">
-                  <span class="skill-cat-icon">
-                     🚀
-                  </span>
-                  <div>
-                     <div class="skill-cat-label" data-i18n="skills.cat4">
-                        Code Review
-                     </div>
-                     <div class="skill-cat-sub">
-                        QA · BA Collaboration
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- EXPERIENCE -->
-      <section id="experience">
-         <div class="container">
-            <div class="section-header reveal">
-               <div class="section-tag" data-i18n="exp.tag">
-                  Where I've Been
-               </div>
-               <h2 class="section-title-main" data-i18n="exp.title">
-                  Work Experience
-               </h2>
-               <p class="section-subtitle" data-i18n="exp.sub">
-                  Building production software across fintech, aviation, healthcare, logistics, and AI automation.
-               </p>
-            </div>
-            <div class="timeline">
-               <div class="timeline-item">
-                  <div class="timeline-dot">
-                  </div>
-                  <div class="exp-card">
-                     <div class="exp-meta">
-                        <div class="exp-role">
-                           <span data-i18n="exp1.role">
-                              Frontend Developer
-                           </span>
-                           <span class="tag-latest" data-i18n="exp.current">
-                              Current
-                           </span>
-                        </div>
-                        <span class="exp-period">
-                           Jun 2025 — Jun 2026
-                        </span>
-                     </div>
-                     <div class="exp-company">
-                        SmartOSC — Cebu Pacific Air (Philippines)
-                     </div>
-                     <ul class="exp-list">
-                        <li data-i18n="exp1.b1">
-                           Enterprise Angular development + CMS platform migration
-                        </li>
-                        <li data-i18n="exp1.b2">
-                           Integration with third-party payment and booking APIs
-                        </li>
-                        <li data-i18n="exp1.b3">
-                           Cross-functional collaboration with QA, BA, and design teams
-                        </li>
-                        <li data-i18n="exp1.b4">
-                           Code review ownership and feature delivery for international client
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="timeline-item">
-                  <div class="timeline-dot">
-                  </div>
-                  <div class="exp-card">
-                     <div class="exp-meta">
-                        <div class="exp-role" data-i18n="exp5.role">
-                        </div>
-                        <span class="exp-period">
-                           2025 — Present
-                        </span>
-                     </div>
-                     <div class="exp-company" data-i18n="exp5.company">
-                     </div>
-                     <ul class="exp-list">
-                        <li data-i18n="exp5.b1">
-                        </li>
-                        <li data-i18n="exp5.b2">
-                        </li>
-                        <li data-i18n="exp5.b3">
-                        </li>
-                        <li data-i18n="exp5.b4">
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="timeline-item">
-                  <div class="timeline-dot">
-                  </div>
-                  <div class="exp-card">
-                     <div class="exp-meta">
-                        <div class="exp-role" data-i18n="exp4.role">
-                           Frontend Developer
-                        </div>
-                        <span class="exp-period">
-                           Jan 2024 — Jan 2025
-                        </span>
-                     </div>
-                     <div class="exp-company">
-                        Techcombank Dev
-                     </div>
-                     <ul class="exp-list">
-                        <li data-i18n="exp4.b1">
-                        </li>
-                        <li data-i18n="exp4.b2">
-                        </li>
-                        <li data-i18n="exp4.b3">
-                        </li>
-                        <li data-i18n="exp4.b4">
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="timeline-item">
-   <div class="timeline-dot">
-   </div>
-
-   <div class="exp-card">
-      <div class="exp-meta">
-         <div class="exp-role" data-i18n="exp6.role">
-            AI / Fullstack Developer
-         </div>
-
-         <span class="exp-period">
-            2024 — 2025
-         </span>
-      </div>
-
-      <div class="exp-company" data-i18n="exp6.company">
-         RATRACO
-      </div>
-
-      <ul class="exp-list">
-         <li data-i18n="exp6.b1">
-            Built AI-powered enterprise applications for logistics and container operations.
-         </li>
-
-         <li data-i18n="exp6.b2">
-            Developed container temperature monitoring workflows to support operational tracking and business automation.
-         </li>
-
-         <li data-i18n="exp6.b3">
-            Implemented license plate recognition from RTSP camera streams using YOLOv8 and AI-assisted processing.
-         </li>
-
-         <li data-i18n="exp6.b4">
-            Delivered frontend modules with Angular and backend services with Node.js, integrating AI tools such as Ollama.
-         </li>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-cta" data-i18n="nav.hire">
+            Hire Me
+          </a>
+        </li>
       </ul>
-   </div>
-</div>
-               <div class="timeline-item">
-                  <div class="timeline-dot">
-                  </div>
-                  <div class="exp-card">
-                     <div class="exp-meta">
-                        <div class="exp-role" data-i18n="exp2.role">
-                           Frontend Developer
-                        </div>
-                        <span class="exp-period">
-                           Jan 2021 — Jan 2023
-                        </span>
-                     </div>
-                     <div class="exp-company">
-                        Aratech
-                     </div>
-                     <ul class="exp-list">
-                        <li data-i18n="exp2.b1">
-                           Angular / AngularJS development for enterprise contracts
-                        </li>
-                        <li data-i18n="exp2.b2">
-                           Hospital LIS system and Viettel contract management platform
-                        </li>
-                        <li data-i18n="exp2.b3">
-                           UI optimization, responsive design, and performance tuning
-                        </li>
-                        <li data-i18n="exp2.b4">
-                           Direct client-facing requirements gathering and implementation
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="timeline-item">
-                  <div class="timeline-dot">
-                  </div>
-                  <div class="exp-card">
-                     <div class="exp-meta">
-                        <div class="exp-role" data-i18n="exp3.role">
-                           Freelance Fullstack Developer
-                        </div>
-                        <span class="exp-period">
-                           2021 — Present
-                        </span>
-                     </div>
-                     <div class="exp-company" data-i18n="exp3.company">
-                        Independent
-                     </div>
-                     <ul class="exp-list">
-                        <li data-i18n="exp3.b1">
-                           Fullstack development: Angular frontend + Python backend
-                        </li>
-                        <li data-i18n="exp3.b2">
-                           AI/LLM integration projects for business automation
-                        </li>
-                        <li data-i18n="exp3.b3">
-                           Meta ecosystem integrations (Facebook & TikTok APIs)
-                        </li>
-                        <li data-i18n="exp3.b4">
-                           Japanese learning mobile app built with React Native
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- PROJECTS -->
-      <section id="projects">
-         <div class="container">
-            <div class="section-header reveal">
-               <div class="section-tag" data-i18n="proj.tag">
-                  What I've Built
-               </div>
-               <h2 class="section-title-main" data-i18n="proj.title">
-                  Featured Projects
-               </h2>
-               <p class="section-subtitle" data-i18n="proj.sub">
-                  Production systems across aviation, healthcare, telecoms, and education.
-               </p>
-            </div>
-            <div class="projects-grid">
-
-            <article class="project-card project-card-featured">
-               <div class="project-top">
-                  <span class="project-num">01</span>
-                  <span class="project-badge live">Enterprise</span>
-               </div>
-
-               <h3 class="project-title" data-i18n="p1.title">
-                  Cebu Pacific Air
-               </h3>
-
-               <p class="project-desc" data-i18n="p1.desc">
-                  Enterprise booking and CMS platform for one of Southeast Asia's largest
-                  low-cost airlines. Angular-first, third-party API heavy, international team.
-               </p>
-
-               <div class="project-stack">
-                  <span class="project-tag">Angular</span>
-                  <span class="project-tag">CMS</span>
-                  <span class="project-tag">REST API</span>
-               </div>
-
-               <a
-                  href="https://cebupacificair.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="project-link"
-                  aria-label="View Cebu Pacific Air project"
-               >
-                  <span>View project</span>
-                  <span class="project-arrow">→</span>
-               </a>
-            </article>
-
-
-            <article class="project-card project-card-featured">
-               <div class="project-top">
-                  <span class="project-num">02</span>
-                  <span class="project-badge live">Healthcare</span>
-               </div>
-
-               <h3 class="project-title" data-i18n="p2.title">
-                  Hospital LIS System
-               </h3>
-
-               <p class="project-desc" data-i18n="p2.desc">
-                  Laboratory information system for hospital operations — complex data workflows,
-                  role-based access, and real-time lab result management.
-               </p>
-
-               <div class="project-stack">
-                  <span class="project-tag">Angular</span>
-                  <span class="project-tag">C# REST API</span>
-                  <span class="project-tag">SQL</span>
-               </div>
-
-               <a
-                  href="https://aratech.vn/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="project-link"
-                  aria-label="View Hospital LIS project"
-               >
-                  <span>View project</span>
-                  <span class="project-arrow">→</span>
-               </a>
-            </article>
-
-
-            <article class="project-card project-card-featured">
-               <div class="project-top">
-                  <span class="project-num">03</span>
-                  <span class="project-badge live">Telecom</span>
-               </div>
-
-               <h3 class="project-title" data-i18n="p3.title">
-                  Viettel Contract Manager
-               </h3>
-
-               <p class="project-desc" data-i18n="p3.desc">
-                  Internal contract lifecycle management system for Vietnam's largest telecom
-                  company. Built from requirements, shipped to production.
-               </p>
-
-               <div class="project-stack">
-                  <span class="project-tag">Angular</span>
-                  <span class="project-tag">Microservices</span>
-               </div>
-
-               <a
-                  href="https://vcontract.viettel.vn/bccs/enterprise-login"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="project-link"
-                  aria-label="View Viettel Contract Manager project"
-               >
-                  <span>View project</span>
-                  <span class="project-arrow">→</span>
-               </a>
-            </article>
-
-
-            <article class="project-card">
-               <div class="project-top">
-                  <span class="project-num">04</span>
-                  <span class="project-badge">Mobile</span>
-               </div>
-
-               <h3 class="project-title" data-i18n="p4.title">
-                  Japanese Learning App
-               </h3>
-
-               <p class="project-desc" data-i18n="p4.desc">
-                  Cross-platform mobile language learning app with spaced repetition, kanji
-                  drills, and progress tracking. Full freelance end-to-end delivery.
-               </p>
-
-               <div class="project-stack">
-                  <span class="project-tag">React Native</span>
-                  <span class="project-tag">Python</span>
-               </div>
-
-               <div class="project-link project-link-disabled">
-                  <span>Private client project</span>
-                  <!-- <span class="project-arrow">→</span> -->
-               </div>
-            </article>
-
-
-            <article class="project-card">
-               <div class="project-top">
-                  <span class="project-num">05</span>
-                  <span class="project-badge">Automation</span>
-               </div>
-
-               <h3 class="project-title" data-i18n="p5.title">
-                  Meta Ads Integration
-               </h3>
-
-               <p class="project-desc" data-i18n="p5.desc">
-                  Business automation platform integrating Facebook and TikTok APIs for
-                  ad campaign management, analytics, and lead generation pipelines.
-               </p>
-
-               <div class="project-stack">
-                  <span class="project-tag">Angular</span>
-                  <span class="project-tag">Python</span>
-                  <span class="project-tag">Meta API</span>
-               </div>
-
-               <div class="project-link project-link-disabled">
-                  <span>Private client project</span>
-                  <!-- <span class="project-arrow">→</span> -->
-               </div>
-            </article>
-
-
-            <article class="project-card">
-               <div class="project-top">
-                  <span class="project-num">06</span>
-                  <span class="project-badge">AI / LLM</span>
-               </div>
-
-               <h3 class="project-title" data-i18n="p6.title">
-                  AI Integration Projects
-               </h3>
-
-               <p class="project-desc" data-i18n="p6.desc">
-                  Multiple client projects integrating LLMs and AI automation into web apps
-                  — from intelligent chatbots to document processing pipelines.
-               </p>
-
-               <div class="project-stack">
-                  <span class="project-tag">Python</span>
-                  <span class="project-tag">LLM</span>
-                  <span class="project-tag">Angular</span>
-               </div>
-
-               <a
-                  href="https://github.com/uncleyellow/tools_ai_ratraco"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="project-link"
-                  aria-label="View AI Integration project"
-               >
-                  <span>View source</span>
-                  <span class="project-arrow">→</span>
-               </a>
-            </article>
-
-
-            <article class="project-card project-card-featured">
-               <div class="project-top">
-                  <span class="project-num">07</span>
-                  <span class="project-badge live">Live Product</span>
-               </div>
-
-               <h3 class="project-title">
-                  Driving School Management System
-               </h3>
-
-               <p class="project-desc">
-                  Fullstack production platform for driving school operations: student management,
-                  lesson tracking, internal exams, progress analytics, and role-based access
-                  for Admin / Student / Guest.
-               </p>
-
-               <div class="project-stack">
-                  <span class="project-tag">Angular</span>
-                  <span class="project-tag">Python</span>
-                  <span class="project-tag">REST API</span>
-                  <span class="project-tag">Fullstack</span>
-                  <span class="project-tag">Node.js</span>
-               </div>
-
-               <a
-                  href="https://hoclaixe-hieukhanh.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="project-link"
-                  aria-label="View Driving School Management System"
-               >
-                  <span>Open live app</span>
-                  <span class="project-arrow">→</span>
-               </a>
-            </article>
-
-            <article class="project-card">
-               <div class="project-top">
-                  <span class="project-num">08</span>
-                  <span class="project-badge">AI / Logistics</span>
-               </div>
-
-               <h3 class="project-title">
-                  RATRACO AI Operations Platform
-               </h3>
-
-               <p class="project-desc">
-                  Enterprise AI tools for logistics operations: container temperature monitoring,
-                  RTSP camera license plate recognition, and workflow automation using YOLOv8,
-                  Ollama, Angular, and Node.js.
-               </p>
-
-               <div class="project-stack">
-                  <span class="project-tag">Angular</span>
-                  <span class="project-tag">Node.js</span>
-                  <span class="project-tag">YOLOv8</span>
-                  <span class="project-tag">Ollama</span>
-                  <span class="project-tag">RTSP</span>
-               </div>
-
-               <div class="project-link project-link-private">
-                  <span>Private enterprise project</span>
-               </div>
-            </article>
-
-            <article class="project-card">
-               <div class="project-top">
-                  <span class="project-num">09</span>
-                  <span class="project-badge">Aviation / Agent</span>
-               </div>
-
-               <h3 class="project-title">
-                  SPL Agent — Cebu Pacific Air
-               </h3>
-
-               <p class="project-desc">
-                  Agent-facing aviation platform supporting booking-related workflows and
-                  operational modules for Cebu Pacific Air. Contributed to Angular feature
-                  development, CMS integration, third-party API handling, and production-ready
-                  delivery in an international client environment.
-               </p>
-
-               <div class="project-stack">
-                  <span class="project-tag">Angular</span>
-                  <span class="project-tag">TypeScript</span>
-                  <span class="project-tag">CMS</span>
-                  <span class="project-tag">REST API</span>
-                  <span class="project-tag">Third-party Integration</span>
-               </div>
-
-               <div class="project-link project-link-private">
-                  <span>Private client project</span>
-                  <!-- <span class="project-arrow">→</span> -->
-               </div>
-            </article>
-            </div>
-         </div>
-      </section>
-      <!-- CASE STUDY -->
-      <section id="case-study">
-         <div class="container">
-            <div class="section-header reveal">
-               <div class="section-tag" data-i18n="case.tag">
-                  Process
-               </div>
-               <h2 class="section-title-main" data-i18n="case.title">
-               </h2>
-               <p class="section-subtitle" data-i18n="case.sub">
-               </p>
-            </div>
-            <div class="case-grid">
-               <!-- ITEM -->
-               <div class="case-item reveal" tabindex="0">
-                  <div class="case-header">
-                     <div class="case-step">
-                        01
-                     </div>
-                     <div class="case-title" data-i18n="case.ba">
-                     </div>
-                     <div class="case-toggle">
-                        +
-                     </div>
-                  </div>
-                  <div class="case-detail">
-                     <p data-i18n="case.ba_desc">
-                     </p>
-                     <ul>
-                        <li>
-                           Analyze user stories
-                        </li>
-                        <li>
-                           Break tasks
-                        </li>
-                        <li>
-                           Align backend
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="case-item reveal" tabindex="0">
-                  <div class="case-header">
-                     <div class="case-step">
-                        02
-                     </div>
-                     <div class="case-title" data-i18n="case.dev">
-                     </div>
-                     <div class="case-toggle">
-                        +
-                     </div>
-                  </div>
-                  <div class="case-detail">
-                     <p data-i18n="case.dev_desc">
-                     </p>
-                     <ul>
-                        <li>
-                           Reusable components
-                        </li>
-                        <li>
-                           API integration
-                        </li>
-                        <li>
-                           Optimize performance
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="case-item reveal" tabindex="0">
-                  <div class="case-header">
-                     <div class="case-step">
-                        03
-                     </div>
-                     <div class="case-title" data-i18n="case.test">
-                     </div>
-                     <div class="case-toggle">
-                        +
-                     </div>
-                  </div>
-                  <div class="case-detail">
-                     <p data-i18n="case.test_desc">
-                     </p>
-                  </div>
-               </div>
-               <div class="case-item reveal" tabindex="0">
-                  <div class="case-header">
-                     <div class="case-step">
-                        04
-                     </div>
-                     <div class="case-title" data-i18n="case.pr">
-                     </div>
-                     <div class="case-toggle">
-                        +
-                     </div>
-                  </div>
-                  <div class="case-detail">
-                     <p data-i18n="case.pr_desc">
-                     </p>
-                  </div>
-               </div>
-               <div class="case-item reveal" tabindex="0">
-                  <div class="case-header">
-                     <div class="case-step">
-                        05
-                     </div>
-                     <div class="case-title" data-i18n="case.review">
-                     </div>
-                     <div class="case-toggle">
-                        +
-                     </div>
-                  </div>
-                  <div class="case-detail">
-                     <p data-i18n="case.review_desc">
-                     </p>
-                  </div>
-               </div>
-               <div class="case-item reveal" tabindex="0">
-                  <div class="case-header">
-                     <div class="case-step">
-                        06
-                     </div>
-                     <div class="case-title" data-i18n="case.sonar">
-                     </div>
-                     <div class="case-toggle">
-                        +
-                     </div>
-                  </div>
-                  <div class="case-detail">
-                     <p data-i18n="case.sonar_desc">
-                     </p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <section class="system-design">
-         <div class="container">
-            <h2>
-               System Architecture
-            </h2>
-            <div class="diagram">
-               <div class="box">
-                  Frontend (Angular)
-               </div>
-               <div class="arrow">
-                  →
-               </div>
-               <div class="box">
-                  API
-               </div>
-               <div class="arrow">
-                  →
-               </div>
-               <div class="box">
-                  Backend (Python)
-               </div>
-               <div class="arrow">
-                  →
-               </div>
-               <div class="box">
-                  DB
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- GITHUB -->
-      <section id="github">
-         <div class="container">
-            <div class="section-header reveal">
-               <div class="section-tag">
-                  Open Source
-               </div>
-               <h2 class="section-title-main">
-                  My GitHub Projects
-               </h2>
-               <p class="section-subtitle">
-                  Real code from my repositories
-               </p>
-            </div>
-            <div class="projects-grid loading" id="githubRepos">
-               <!-- JS render here -->
-            </div>
-         </div>
-      </section>
-      <!-- ABOUT -->
-      <section id="about">
-         <div class="container">
-            <div class="section-header reveal">
-               <div class="section-tag" data-i18n="about.tag">
-                  About
-               </div>
-               <h2 class="section-title-main" data-i18n="about.title">
-                  Who I am
-               </h2>
-               <p class="section-subtitle" data-i18n="about.sub">
-                  A quick intro about me
-               </p>
-            </div>
-            <div class="about-grid">
-               <!-- ✅ AVATAR -->
-               <div class="about-avatar reveal">
-                  <img src="./assets/img/avatar.jpg" alt="avatar" loading="lazy"/>
-               </div>
-               <!-- ✅ TEXT -->
-               <div class="about-text reveal">
-                  <p data-i18n="about.desc1">
-                  </p>
-                  <p data-i18n="about.desc2">
-                  </p>
-                  <p data-i18n="about.desc3">
-                  </p>
-                  <!-- ✅ PHONE -->
-                  <div class="about-contact">
-                     <a href="tel:+84985363602">
-                        📞 +84 985363602
-                     </a>
-                  </div>
-               </div>
-            </div>
-            <!-- ✅ CAREER TIMELINE -->
-            <div class="about-timeline reveal">
-               <div class="timeline-line"></div>
-
-               <div class="timeline-item2">
-                  <div class="timeline-marker">
-                     <span class="dot"></span>
-                  </div>
-
-                  <div class="timeline-content">
-                     <div class="timeline-top">
-                        <div class="timeline-year">2021</div>
-                        <span class="timeline-badge">Start</span>
-                     </div>
-
-                     <h3 class="timeline-title" data-i18n="about.timeline.2021.title">
-                        Started Professional Development
-                     </h3>
-
-                     <p class="timeline-text" data-i18n="about.timeline.2021.desc">
-                        Began working as a frontend developer, focusing on Angular, AngularJS,
-                        HTML/CSS, JavaScript, and enterprise UI development.
-                     </p>
-
-                     <div class="timeline-tags">
-                        <span>Angular</span>
-                        <span>AngularJS</span>
-                        <span>JavaScript</span>
-                        <span>HTML/CSS</span>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="timeline-item2">
-                  <div class="timeline-marker">
-                     <span class="dot"></span>
-                  </div>
-
-                  <div class="timeline-content">
-                     <div class="timeline-top">
-                        <div class="timeline-year">2021 — 2023</div>
-                        <span class="timeline-badge">Healthcare / Telecom</span>
-                     </div>
-
-                     <h3 class="timeline-title" data-i18n="about.timeline.aratech.title">
-                        Aratech — Frontend Developer
-                     </h3>
-
-                     <p class="timeline-text" data-i18n="about.timeline.aratech.desc">
-                        Developed enterprise applications for healthcare and telecom domains,
-                        including Hospital LIS systems and Viettel contract management platforms.
-                        Worked on complex data workflows, role-based access, responsive UI,
-                        and performance optimization.
-                     </p>
-
-                     <div class="timeline-tags">
-                        <span>Angular</span>
-                        <span>AngularJS</span>
-                        <span>SQL</span>
-                        <span>Microservices</span>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="timeline-item2">
-                  <div class="timeline-marker">
-                     <span class="dot"></span>
-                  </div>
-
-                  <div class="timeline-content">
-                     <div class="timeline-top">
-                        <div class="timeline-year">2021 — Present</div>
-                        <span class="timeline-badge">Freelance</span>
-                     </div>
-
-                     <h3 class="timeline-title" data-i18n="about.timeline.freelance.title">
-                        Freelance Fullstack Developer
-                     </h3>
-
-                     <p class="timeline-text" data-i18n="about.timeline.freelance.desc">
-                        Delivered end-to-end freelance solutions using Angular, Python, React Native,
-                        and third-party APIs. Built business automation tools, Meta Ads integrations,
-                        AI/LLM-powered workflows, and a Japanese learning mobile application.
-                     </p>
-
-                     <div class="timeline-tags">
-                        <span>Angular</span>
-                        <span>Python</span>
-                        <span>React Native</span>
-                        <span>Meta API</span>
-                        <span>LLM</span>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="timeline-item2">
-                  <div class="timeline-marker">
-                     <span class="dot"></span>
-                  </div>
-
-                  <div class="timeline-content">
-                     <div class="timeline-top">
-                        <div class="timeline-year">2024 — 2025</div>
-                        <span class="timeline-badge">Banking / Fintech</span>
-                     </div>
-
-                     <h3 class="timeline-title" data-i18n="about.timeline.techcombank.title">
-                        Techcombank — Frontend Developer
-                     </h3>
-
-                     <p class="timeline-text" data-i18n="about.timeline.techcombank.desc">
-                        Built enterprise bidding and contract management systems for internal
-                        banking operations. Implemented scalable Angular and NgRx architecture,
-                        improved application performance, supported refactoring, and enhanced
-                        long-term maintainability through code quality practices.
-                     </p>
-
-                     <div class="timeline-tags">
-                        <span>Angular</span>
-                        <span>NgRx</span>
-                        <span>TypeScript</span>
-                        <span>REST API</span>
-                        <span>SonarQube</span>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="timeline-item2 timeline-featured">
-                  <div class="timeline-marker">
-                     <span class="dot"></span>
-                  </div>
-
-                  <div class="timeline-content">
-                     <div class="timeline-top">
-                        <div class="timeline-year">2024 — 2025</div>
-                        <span class="timeline-badge">AI / Logistics</span>
-                     </div>
-
-                     <h3 class="timeline-title" data-i18n="about.timeline.ratraco.title">
-                        RATRACO — AI / Fullstack Developer
-                     </h3>
-
-                     <p class="timeline-text" data-i18n="about.timeline.ratraco.desc">
-                        Applied AI to enterprise logistics operations, including container
-                        temperature monitoring, RTSP camera processing, and license plate
-                        recognition. Built Angular frontend modules and Node.js backend services,
-                        integrating YOLOv8 and Ollama to support automation workflows.
-                     </p>
-
-                     <div class="timeline-tags">
-                        <span>Angular</span>
-                        <span>Node.js</span>
-                        <span>YOLOv8</span>
-                        <span>Ollama</span>
-                        <span>RTSP</span>
-                        <span>Computer Vision</span>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="timeline-item2">
-                  <div class="timeline-marker">
-                     <span class="dot"></span>
-                  </div>
-
-                  <div class="timeline-content">
-                     <div class="timeline-top">
-                        <div class="timeline-year">2025 — Present</div>
-                        <span class="timeline-badge">Product Owner</span>
-                     </div>
-
-                     <h3 class="timeline-title" data-i18n="about.timeline.driving.title">
-                        Driving School Management System
-                     </h3>
-
-                     <p class="timeline-text" data-i18n="about.timeline.driving.desc">
-                        Designed and built a fullstack production platform for driving school
-                        operations. Implemented student management, lesson tracking, internal
-                        exams, progress analytics, RBAC, deployment, and production maintenance
-                        independently.
-                     </p>
-
-                     <div class="timeline-tags">
-                        <span>Angular</span>
-                        <span>Python</span>
-                        <span>Node.js</span>
-                        <span>REST API</span>
-                        <span>Vercel</span>
-                        <span>Fullstack</span>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="timeline-item2">
-                  <div class="timeline-marker">
-                     <span class="dot"></span>
-                  </div>
-
-                  <div class="timeline-content">
-                     <div class="timeline-top">
-                        <div class="timeline-year">Jun 2025 — Present</div>
-                        <span class="timeline-badge">Aviation / International</span>
-                     </div>
-
-                     <h3 class="timeline-title" data-i18n="about.timeline.smartosc.title">
-                        SmartOSC — Cebu Pacific Air
-                     </h3>
-
-                     <p class="timeline-text" data-i18n="about.timeline.smartosc.desc">
-                        Joined an international aviation project for Cebu Pacific Air. Focused on
-                        enterprise Angular development, CMS migration, third-party API integration,
-                        booking-related workflows, code review, and production-quality feature delivery.
-                     </p>
-
-                     <div class="timeline-tags">
-                        <span>Angular</span>
-                        <span>TypeScript</span>
-                        <span>CMS</span>
-                        <span>REST API</span>
-                        <span>Code Review</span>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- MORE -->
-      <section id="more">
-         <div class="container">
-            <div class="more-grid">
-               <div class="reveal">
-                  <div class="section-header" style="margin-bottom:28px">
-                     <div class="section-tag" data-i18n="cert.tag">
-                        Credentials
-                     </div>
-                     <h2 class="section-title-main" style="font-size:28px" data-i18n="cert.title">
-                        Certifications
-                     </h2>
-                  </div>
-                  <div class="cert-list">
-                     <div class="cert-item">
-                        <span class="cert-icon">
-                           🌐
-                        </span>
-                        <div>
-                           <div class="cert-name">
-                              IELTS ~6.5 (B2)
-                           </div>
-                           <div class="cert-year" data-i18n="cert1.sub">
-                              2023 · Professional working proficiency
-                           </div>
-                        </div>
-                     </div>
-                     <div class="cert-item">
-                        <span class="cert-icon">
-                           🇯🇵
-                        </span>
-                        <div>
-                           <div class="cert-name">
-                              JLPT N5
-                           </div>
-                           <div class="cert-year" data-i18n="cert2.sub">
-                              2021 · Japanese Language Proficiency
-                           </div>
-                        </div>
-                     </div>
-                     <div class="cert-item">
-                        <span class="cert-icon">
-                           🏫
-                        </span>
-                        <div>
-                           <div class="cert-name" data-i18n="cert3.branch">
-                              Đại học Thủy Lợi
-                           </div>
-                           <div class="cert-year" data-i18n="cert3.sub">
-                              2021 · Khoa công nghệ thông tin Việt Nhật
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="reveal">
-                  <div class="section-header" style="margin-bottom:28px">
-                     <div class="section-tag" data-i18n="interest.tag">
-                        Beyond Code
-                     </div>
-                     <h2 class="section-title-main" style="font-size:28px" data-i18n="interest.title">
-                        Interests
-                     </h2>
-                  </div>
-                  <div class="interest-grid">
-                     <div class="interest-card">
-                        <span class="interest-emoji">
-                           🏀
-                        </span>
-                        <div class="interest-label" data-i18n="int1">
-                           Basketball
-                        </div>
-                     </div>
-                     <div class="interest-card">
-                        <span class="interest-emoji">
-                           🎸
-                        </span>
-                        <div class="interest-label" data-i18n="int2">
-                           Guitar
-                        </div>
-                     </div>
-                     <div class="interest-card">
-                        <span class="interest-emoji">
-                           🎮
-                        </span>
-                        <div class="interest-label" data-i18n="int3">
-                           Gaming
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- CONTACT -->
-      <section id="contact">
-         <div class="container">
-            <div class="contact-wrap">
-               <div class="contact-glow reveal">
-                  <div class="contact-label" data-i18n="contact.label">
-                     Let's Work Together
-                  </div>
-                  <h2 class="contact-heading" data-i18n="contact.heading">
-                     Ready to build something great?
-                  </h2>
-                  <p class="contact-sub" data-i18n="contact.sub">
-                     Open to full-time roles, contracts, and interesting freelance projects.
-                     Let's talk.
-                  </p>
-                  <a href="mailto:kiniemboquenjerry@gmail.com" class="contact-email">
-                     📬 kiniemboquenjerry@gmail.com
-                  </a>
-                  <form action="https://formsubmit.co/kiniemboquenjerry@gmail.com" method="POST"
-                  class="contact-form" enctype="multipart/form-data">
-                     <div class="input-group">
-                        <input type="text" name="name" required>
-                        <label>Your Name</label>
-                     </div>
-
-                     <div class="input-group">
-                        <input type="email" name="email" required>
-                        <label>Your Email</label>
-                     </div>
-
-                     <div class="input-group">
-                        <textarea name="message" rows="4" required></textarea>
-                        <label>Your Message</label>
-                     </div>
-                     <!-- Upload file -->
-                     <input type="file" name="attachment" accept=".pdf,.doc,.docx,.png,.jpg">
-                     <button type="submit" class="btn-primary">
-                        Send Message 🚀
-                     </button>
-                  </form>
-                  <!-- ✅ DOWNLOAD CV -->
-                  <a href="Khanh_CV.html" id="openCV" class="btn-primary contact-cv">
-                     <span>📄 View CV</span>
-                  </a>
-                  <a href="./Khanh_CV.pdf" download class="btn-secondary contact-cv-download">
-                     ⬇️ Download CV
-                  </a>
-                  <div class="social-links">
-                     <a href="https://github.com/uncleyellow" target="_blank" class="social-link"
-                     title="GitHub">
-                        💻
-                     </a>
-                     <a href="#" class="social-link" title="LinkedIn">
-                        💼
-                     </a>
-                     <a href="#" class="social-link" title="Twitter / X">
-                        🐦
-                     </a>
-                     <a href="#" class="social-link" title="CV Download">
-                        📄
-                     </a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <footer>
-         <span>
-            ©
-            <span id="year">
-            </span>
-            Dương Đình Khánh
-         </span>
-         <span data-i18n="footer.built">
-            Built with
-            <span style="color:#ef4444">
-               ♥
-            </span>
-            — No frameworks, pure craft
-         </span>
-      </footer>
-      <!-- ✅ CV MODAL -->
-      <div id="cvModal" class="cv-modal">
-         <div class="cv-content">
-            <span class="cv-close">
-               &times;
-            </span>
-            <iframe src="./Khanh_CV.pdf">
-            </iframe>
-         </div>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" onclick="setLang('en')">
+            EN
+          </button>
+          <button class="lang-btn" onclick="setLang('vi')">
+            VI
+          </button>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span>
+          </span>
+          <span>
+          </span>
+          <span>
+          </span>
+        </div>
       </div>
-      <script src="./main.js" type="module"></script>
-      <script src="./intro-greeting.js"></script>
-   </body>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#skills" onclick="closeMobile()" data-i18n="nav.skills">
+        Skills
+      </a>
+      <a href="#experience" onclick="closeMobile()" data-i18n="nav.experience">
+        Experience
+      </a>
+      <a href="#projects" onclick="closeMobile()" data-i18n="nav.projects">
+        Projects
+      </a>
+      <a href="#more" onclick="closeMobile()" data-i18n="nav.certs">
+        Certifications
+      </a>
+      <a href="#contact" onclick="closeMobile()" style="color:var(--accent)"
+      data-i18n="nav.hire_arrow">
+        Hire Me →
+      </a>
+      <div class="mobile-lang">
+        <button class="lang-btn active" onclick="setLang('en')">
+          EN
+        </button>
+        <button class="lang-btn" onclick="setLang('vi')">
+          VI
+        </button>
+      </div>
+    </div>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <div class="hero-eyebrow">
+              <span class="dot">
+              </span>
+              <span data-i18n="hero.available">
+                Available for opportunities
+              </span>
+            </div>
+            <h1 class="hero-name">
+              <span data-i18n="hero.name">
+                Duong Dinh Khanh
+              </span>
+              <span data-i18n="hero.title1">
+                Frontend &
+              </span>
+              <br>
+              <span class="accent">
+                Fullstack
+              </span>
+              <br>
+              <span data-i18n="hero.title2">
+                Developer
+              </span>
+            </h1>
+            <p class="hero-title">
+              <span id="typewriter">
+              </span>
+              <span class="cursor">
+              </span>
+            </p>
+            <p class="hero-desc" data-i18n="hero.desc">
+              5+ years crafting high-performance web & mobile experiences. Specialized
+              in Angular, React, and Python — from pixel-perfect UIs to robust backend
+              integrations.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn-primary">
+                <span data-i18n="hero.cta1">
+                  View My Work
+                </span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a href="#contact" class="btn-secondary" data-i18n="hero.cta2">
+                Get In Touch
+              </a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <div class="stat-number">
+                  5+
+                </div>
+                <div class="stat-label" data-i18n="hero.stat1">
+                  Years Exp.
+                </div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">
+                  10+
+                </div>
+                <div class="stat-label" data-i18n="hero.stat2">
+                  Projects
+                </div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">
+                  5+
+                </div>
+                <div class="stat-label" data-i18n="hero.stat3">
+                  Companies
+                </div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">
+                  B2
+                </div>
+                <div class="stat-label" data-i18n="hero.stat4">
+                  English
+                </div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">
+                  N4
+                </div>
+                <div class="stat-label" data-i18n="hero.stat5">
+                  Japanese
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-avatar-card">
+            <div class="avatar-bg">
+              <img src="./assets/img/avatar.jpg" alt="avatar" class="avatar-img" loading="lazy"
+              />
+              <div class="avatar-name-label" data-i18n="hero.avatar_role">
+                Frontend Developer
+              </div>
+              <div class="avatar-role-label" data-i18n="hero.avatar_loc">
+                Ha Noi City, Vietnam
+              </div>
+              <div class="avatar-badges">
+                <span class="badge">
+                  Angular
+                </span>
+                <span class="badge">
+                  React
+                </span>
+                <span class="badge">
+                  Python
+                </span>
+                <span class="badge">
+                  TypeScript
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag" data-i18n="skills.tag">
+            What I Do
+          </div>
+          <h2 class="section-title-main" data-i18n="skills.title">
+            Technical Skills
+          </h2>
+          <p class="section-subtitle" data-i18n="skills.sub">
+            A focused stack built through years of real-world delivery.
+          </p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-name">
+                <span class="skill-icon">
+                  🅰️
+                </span>
+                Angular
+              </div>
+              <span class="skill-pct">
+                95%
+              </span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="95">
+              </div>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-name">
+                <span class="skill-icon">
+                  ⚛️
+                </span>
+                React / React Native
+              </div>
+              <span class="skill-pct">
+                90%
+              </span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="90">
+              </div>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-name">
+                <span class="skill-icon">
+                  🟢
+                </span>
+                <span data-i18n="skill.node">
+                </span>
+              </div>
+              <span class="skill-pct">
+                85%
+              </span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="85">
+              </div>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-name">
+                <span class="skill-icon">
+                  💛
+                </span>
+                JavaScript / TypeScript
+              </div>
+              <span class="skill-pct">
+                95%
+              </span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="95">
+              </div>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-name">
+                <span class="skill-icon">
+                  🎨
+                </span>
+                HTML / CSS / UI
+              </div>
+              <span class="skill-pct">
+                95%
+              </span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="95">
+              </div>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-name">
+                <span class="skill-icon">
+                  🐍
+                </span>
+                Python
+              </div>
+              <span class="skill-pct">
+                80%
+              </span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="80">
+              </div>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-name">
+                <span class="skill-icon">
+                  🗄️
+                </span>
+                SQL / Microservices
+              </div>
+              <span class="skill-pct">
+                75%
+              </span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="75">
+              </div>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-name">
+                <span class="skill-icon">
+                  📓
+                </span>
+                MongoDB
+              </div>
+              <span class="skill-pct">
+                80%
+              </span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="80">
+              </div>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-name">
+                <span class="skill-icon">
+                  👁️
+                </span>
+                YOLOv8 / Computer Vision
+              </div>
+              <span class="skill-pct">
+                78%
+              </span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="78">
+              </div>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-name">
+                <span class="skill-icon">
+                  🧠
+                </span>
+                Ollama / Local LLM
+              </div>
+              <span class="skill-pct">
+                80%
+              </span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="80">
+              </div>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-name">
+                <span class="skill-icon">
+                  🎥
+                </span>
+                RTSP Camera Processing
+              </div>
+              <span class="skill-pct">
+                75%
+              </span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="75">
+              </div>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-name">
+                <span class="skill-icon">
+                  🐳
+                </span>
+                Docker / Deployment
+              </div>
+              <span class="skill-pct">
+                78%
+              </span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="78">
+              </div>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-name">
+                <span class="skill-icon">
+                  🖌️
+                </span>
+                UI/UX / Figma
+              </div>
+              <span class="skill-pct">
+                85%
+              </span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-width="85">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-cats reveal" style="transition-delay:0.2s">
+          <div class="skill-cat-card">
+            <span class="skill-cat-icon">
+              🤖
+            </span>
+            <div>
+              <div class="skill-cat-label" data-i18n="skills.cat1">
+                AI Integration
+              </div>
+              <div class="skill-cat-sub">
+                LLM · Chatbot · Automation
+              </div>
+            </div>
+          </div>
+          <div class="skill-cat-card">
+            <span class="skill-cat-icon">
+              📱
+            </span>
+            <div>
+              <div class="skill-cat-label" data-i18n="skills.cat2">
+                Mobile Dev
+              </div>
+              <div class="skill-cat-sub">
+                React Native · Cross-platform
+              </div>
+            </div>
+          </div>
+          <div class="skill-cat-card">
+            <span class="skill-cat-icon">
+              🔗
+            </span>
+            <div>
+              <div class="skill-cat-label" data-i18n="skills.cat3">
+                API & CMS
+              </div>
+              <div class="skill-cat-sub">
+                REST · Third-party · Migration
+              </div>
+            </div>
+          </div>
+          <div class="skill-cat-card">
+            <span class="skill-cat-icon">
+              🚀
+            </span>
+            <div>
+              <div class="skill-cat-label" data-i18n="skills.cat4">
+                Code Review
+              </div>
+              <div class="skill-cat-sub">
+                QA · BA Collaboration
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag" data-i18n="exp.tag">
+            Where I've Been
+          </div>
+          <h2 class="section-title-main" data-i18n="exp.title">
+            Work Experience
+          </h2>
+          <p class="section-subtitle" data-i18n="exp.sub">
+            Building production software across fintech, aviation, healthcare, logistics,
+            and AI automation.
+          </p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot">
+            </div>
+            <div class="exp-card">
+              <div class="exp-meta">
+                <div class="exp-role">
+                  <span data-i18n="exp1.role">
+                    Frontend Developer
+                  </span>
+                  <span class="tag-latest" data-i18n="exp.current">
+                    Current
+                  </span>
+                </div>
+                <span class="exp-period">
+                  Jun 2025 — Jun 2026
+                </span>
+              </div>
+              <div class="exp-company">
+                SmartOSC — Cebu Pacific Air (Philippines)
+              </div>
+              <ul class="exp-list">
+                <li data-i18n="exp1.b1">
+                  Enterprise Angular development + CMS platform migration
+                </li>
+                <li data-i18n="exp1.b2">
+                  Integration with third-party payment and booking APIs
+                </li>
+                <li data-i18n="exp1.b3">
+                  Cross-functional collaboration with QA, BA, and design teams
+                </li>
+                <li data-i18n="exp1.b4">
+                  Code review ownership and feature delivery for international client
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">
+            </div>
+            <div class="exp-card">
+              <div class="exp-meta">
+                <div class="exp-role" data-i18n="exp5.role">
+                </div>
+                <span class="exp-period">
+                  2025 — Present
+                </span>
+              </div>
+              <div class="exp-company" data-i18n="exp5.company">
+              </div>
+              <ul class="exp-list">
+                <li data-i18n="exp5.b1">
+                </li>
+                <li data-i18n="exp5.b2">
+                </li>
+                <li data-i18n="exp5.b3">
+                </li>
+                <li data-i18n="exp5.b4">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">
+            </div>
+            <div class="exp-card">
+              <div class="exp-meta">
+                <div class="exp-role" data-i18n="exp4.role">
+                  Frontend Developer
+                </div>
+                <span class="exp-period">
+                  Jan 2024 — Jan 2025
+                </span>
+              </div>
+              <div class="exp-company">
+                Techcombank Dev
+              </div>
+              <ul class="exp-list">
+                <li data-i18n="exp4.b1">
+                </li>
+                <li data-i18n="exp4.b2">
+                </li>
+                <li data-i18n="exp4.b3">
+                </li>
+                <li data-i18n="exp4.b4">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">
+            </div>
+            <div class="exp-card">
+              <div class="exp-meta">
+                <div class="exp-role" data-i18n="exp6.role">
+                  AI / Fullstack Developer
+                </div>
+                <span class="exp-period">
+                  2024 — 2025
+                </span>
+              </div>
+              <div class="exp-company" data-i18n="exp6.company">
+                RATRACO
+              </div>
+              <ul class="exp-list">
+                <li data-i18n="exp6.b1">
+                  Built AI-powered enterprise applications for logistics and container operations.
+                </li>
+                <li data-i18n="exp6.b2">
+                  Developed container temperature monitoring workflows to support operational
+                  tracking and business automation.
+                </li>
+                <li data-i18n="exp6.b3">
+                  Implemented license plate recognition from RTSP camera streams using YOLOv8
+                  and AI-assisted processing.
+                </li>
+                <li data-i18n="exp6.b4">
+                  Delivered frontend modules with Angular and backend services with Node.js,
+                  integrating AI tools such as Ollama.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">
+            </div>
+            <div class="exp-card">
+              <div class="exp-meta">
+                <div class="exp-role" data-i18n="exp2.role">
+                  Frontend Developer
+                </div>
+                <span class="exp-period">
+                  Jan 2021 — Jan 2023
+                </span>
+              </div>
+              <div class="exp-company">
+                Aratech
+              </div>
+              <ul class="exp-list">
+                <li data-i18n="exp2.b1">
+                  Angular / AngularJS development for enterprise contracts
+                </li>
+                <li data-i18n="exp2.b2">
+                  Hospital LIS system and Viettel contract management platform
+                </li>
+                <li data-i18n="exp2.b3">
+                  UI optimization, responsive design, and performance tuning
+                </li>
+                <li data-i18n="exp2.b4">
+                  Direct client-facing requirements gathering and implementation
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">
+            </div>
+            <div class="exp-card">
+              <div class="exp-meta">
+                <div class="exp-role" data-i18n="exp3.role">
+                  Freelance Fullstack Developer
+                </div>
+                <span class="exp-period">
+                  2021 — Present
+                </span>
+              </div>
+              <div class="exp-company" data-i18n="exp3.company">
+                Independent
+              </div>
+              <ul class="exp-list">
+                <li data-i18n="exp3.b1">
+                  Fullstack development: Angular frontend + Python backend
+                </li>
+                <li data-i18n="exp3.b2">
+                  AI/LLM integration projects for business automation
+                </li>
+                <li data-i18n="exp3.b3">
+                  Meta ecosystem integrations (Facebook & TikTok APIs)
+                </li>
+                <li data-i18n="exp3.b4">
+                  Japanese learning mobile app built with React Native
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag" data-i18n="proj.tag">
+            What I've Built
+          </div>
+
+          <h2 class="section-title-main" data-i18n="proj.title">
+            Featured Projects
+          </h2>
+
+          <p class="section-subtitle" data-i18n="proj.sub">
+            Production systems across aviation, healthcare, telecoms, logistics, AI, and education.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- 01 -->
+          <article class="project-card project-card-featured">
+            <div class="project-top">
+              <span class="project-num">01</span>
+              <span class="project-badge live" data-i18n="p1.badge">Enterprise</span>
+            </div>
+
+            <h3 class="project-title" data-i18n="p1.title">
+              Cebu Pacific Air
+            </h3>
+
+            <p class="project-desc" data-i18n="p1.desc">
+              Enterprise booking and CMS platform for one of Southeast Asia's largest
+              low-cost airlines. Angular-first, third-party API heavy, international team.
+            </p>
+
+            <div class="project-stack">
+              <span class="project-tag">Angular</span>
+              <span class="project-tag">CMS</span>
+              <span class="project-tag">REST API</span>
+            </div>
+
+            <a
+              href="https://cebupacificair.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+              aria-label="View Cebu Pacific Air project"
+            >
+              <span data-i18n="project.cta.view">View project</span>
+              <span class="project-arrow">→</span>
+            </a>
+          </article>
+
+          <!-- 02 -->
+          <article class="project-card project-card-featured">
+            <div class="project-top">
+              <span class="project-num">02</span>
+              <span class="project-badge live" data-i18n="p2.badge">Healthcare</span>
+            </div>
+
+            <h3 class="project-title" data-i18n="p2.title">
+              Hospital LIS System
+            </h3>
+
+            <p class="project-desc" data-i18n="p2.desc">
+              Laboratory information system for hospital operations — complex data workflows,
+              role-based access, and real-time lab result management.
+            </p>
+
+            <div class="project-stack">
+              <span class="project-tag">Angular</span>
+              <span class="project-tag">C# REST API</span>
+              <span class="project-tag">SQL</span>
+            </div>
+
+            <a
+              href="https://aratech.vn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+              aria-label="View Hospital LIS project"
+            >
+              <span data-i18n="project.cta.view">View project</span>
+              <span class="project-arrow">→</span>
+            </a>
+          </article>
+
+          <!-- 03 -->
+          <article class="project-card project-card-featured">
+            <div class="project-top">
+              <span class="project-num">03</span>
+              <span class="project-badge live" data-i18n="p3.badge">Telecom</span>
+            </div>
+
+            <h3 class="project-title" data-i18n="p3.title">
+              Viettel Contract Manager
+            </h3>
+
+            <p class="project-desc" data-i18n="p3.desc">
+              Internal contract lifecycle management system for Vietnam's largest telecom
+              company. Built from requirements, shipped to production.
+            </p>
+
+            <div class="project-stack">
+              <span class="project-tag">Angular</span>
+              <span class="project-tag">Microservices</span>
+            </div>
+
+            <a
+              href="https://vcontract.viettel.vn/bccs/enterprise-login"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+              aria-label="View Viettel Contract Manager project"
+            >
+              <span data-i18n="project.cta.view">View project</span>
+              <span class="project-arrow">→</span>
+            </a>
+          </article>
+
+          <!-- 04 -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-num">04</span>
+              <span class="project-badge" data-i18n="p4.badge">Mobile</span>
+            </div>
+
+            <h3 class="project-title" data-i18n="p4.title">
+              Japanese Learning App
+            </h3>
+
+            <p class="project-desc" data-i18n="p4.desc">
+              Cross-platform mobile language learning app with spaced repetition, kanji
+              drills, and progress tracking. Full freelance end-to-end delivery.
+            </p>
+
+            <div class="project-stack">
+              <span class="project-tag">React Native</span>
+              <span class="project-tag">Python</span>
+            </div>
+
+            <div class="project-link project-link-disabled">
+              <span data-i18n="project.cta.privateClient">
+                Private client project
+              </span>
+            </div>
+          </article>
+
+          <!-- 05 -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-num">05</span>
+              <span class="project-badge" data-i18n="p5.badge">Automation</span>
+            </div>
+
+            <h3 class="project-title" data-i18n="p5.title">
+              Meta Ads Integration
+            </h3>
+
+            <p class="project-desc" data-i18n="p5.desc">
+              Business automation platform integrating Facebook and TikTok APIs for
+              ad campaign management, analytics, and lead generation pipelines.
+            </p>
+
+            <div class="project-stack">
+              <span class="project-tag">Angular</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Meta API</span>
+            </div>
+
+            <div class="project-link project-link-disabled">
+              <span data-i18n="project.cta.privateClient">
+                Private client project
+              </span>
+            </div>
+          </article>
+
+          <!-- 06 -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-num">06</span>
+              <span class="project-badge" data-i18n="p6.badge">AI / LLM</span>
+            </div>
+
+            <h3 class="project-title" data-i18n="p6.title">
+              AI Integration Projects
+            </h3>
+
+            <p class="project-desc" data-i18n="p6.desc">
+              Multiple client projects integrating LLMs and AI automation into web apps
+              — from intelligent chatbots to document processing pipelines.
+            </p>
+
+            <div class="project-stack">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">LLM</span>
+              <span class="project-tag">Angular</span>
+            </div>
+
+            <a
+              href="https://github.com/uncleyellow/tools_ai_ratraco"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+              aria-label="View AI Integration project"
+            >
+              <span data-i18n="project.cta.source">View source</span>
+              <span class="project-arrow">→</span>
+            </a>
+          </article>
+
+          <!-- 07 -->
+          <article class="project-card project-card-featured">
+            <div class="project-top">
+              <span class="project-num">07</span>
+              <span class="project-badge live" data-i18n="p7.badge">Live Product</span>
+            </div>
+
+            <h3 class="project-title" data-i18n="p7.title">
+              Driving School Management System
+            </h3>
+
+            <p class="project-desc" data-i18n="p7.desc">
+              Fullstack production platform for driving school operations: student management,
+              lesson tracking, internal exams, progress analytics, and role-based access
+              for Admin / Student / Guest.
+            </p>
+
+            <div class="project-stack">
+              <span class="project-tag">Angular</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">REST API</span>
+              <span class="project-tag">Fullstack</span>
+              <span class="project-tag">Node.js</span>
+            </div>
+
+            <a
+              href="https://hoclaixe-hieukhanh.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+              aria-label="View Driving School Management System"
+            >
+              <span data-i18n="project.cta.live">Open live app</span>
+              <span class="project-arrow">→</span>
+            </a>
+          </article>
+
+          <!-- 08 -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-num">08</span>
+              <span class="project-badge" data-i18n="p8.badge">AI / Logistics</span>
+            </div>
+
+            <h3 class="project-title" data-i18n="p8.title">
+              RATRACO AI Operations Platform
+            </h3>
+
+            <p class="project-desc" data-i18n="p8.desc">
+              Enterprise AI tools for logistics operations: container temperature monitoring,
+              RTSP camera license plate recognition, and workflow automation using YOLOv8,
+              Ollama, Angular, and Node.js.
+            </p>
+
+            <div class="project-stack">
+              <span class="project-tag">Angular</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">YOLOv8</span>
+              <span class="project-tag">Ollama</span>
+              <span class="project-tag">RTSP</span>
+            </div>
+
+            <div class="project-link project-link-private">
+              <span data-i18n="project.cta.privateEnterprise">
+                Private enterprise project
+              </span>
+            </div>
+          </article>
+
+          <!-- 09 -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-num">09</span>
+              <span class="project-badge" data-i18n="p9.badge">Aviation / Agent</span>
+            </div>
+
+            <h3 class="project-title" data-i18n="p9.title">
+              SPL Agent — Cebu Pacific Air
+            </h3>
+
+            <p class="project-desc" data-i18n="p9.desc">
+              Agent-facing aviation platform supporting booking-related workflows and
+              operational modules for Cebu Pacific Air. Contributed to Angular feature
+              development, CMS integration, third-party API handling, and production-ready
+              delivery in an international client environment.
+            </p>
+
+            <div class="project-stack">
+              <span class="project-tag">Angular</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">CMS</span>
+              <span class="project-tag">REST API</span>
+              <span class="project-tag">Third-party Integration</span>
+            </div>
+
+            <div class="project-link project-link-private">
+              <span data-i18n="project.cta.privateClient">
+                Private client project
+              </span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDY -->
+    <section id="case-study">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag" data-i18n="case.tag">
+            Process
+          </div>
+          <h2 class="section-title-main" data-i18n="case.title">
+          </h2>
+          <p class="section-subtitle" data-i18n="case.sub">
+          </p>
+        </div>
+        <div class="case-grid">
+          <!-- ITEM -->
+          <div class="case-item reveal" tabindex="0">
+            <div class="case-header">
+              <div class="case-step">
+                01
+              </div>
+              <div class="case-title" data-i18n="case.ba">
+              </div>
+              <div class="case-toggle">
+                +
+              </div>
+            </div>
+            <div class="case-detail">
+              <p data-i18n="case.ba_desc">
+              </p>
+              <ul>
+                <li data-i18n="case.ba.li1">
+                  Analyze user stories
+                </li>
+                <li data-i18n="case.ba.li2">
+                  Break tasks
+                </li>
+                <li data-i18n="case.ba.li3">
+                  Align backend
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="case-item reveal" tabindex="0">
+            <div class="case-header">
+              <div class="case-step">
+                02
+              </div>
+              <div class="case-title" data-i18n="case.dev">
+              </div>
+              <div class="case-toggle">
+                +
+              </div>
+            </div>
+            <div class="case-detail">
+              <p data-i18n="case.dev_desc">
+              </p>
+              <ul>
+                <li>
+                  Reusable components
+                </li>
+                <li>
+                  API integration
+                </li>
+                <li>
+                  Optimize performance
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="case-item reveal" tabindex="0">
+            <div class="case-header">
+              <div class="case-step">
+                03
+              </div>
+              <div class="case-title" data-i18n="case.test">
+              </div>
+              <div class="case-toggle">
+                +
+              </div>
+            </div>
+            <div class="case-detail">
+              <p data-i18n="case.test_desc">
+              </p>
+            </div>
+          </div>
+          <div class="case-item reveal" tabindex="0">
+            <div class="case-header">
+              <div class="case-step">
+                04
+              </div>
+              <div class="case-title" data-i18n="case.pr">
+              </div>
+              <div class="case-toggle">
+                +
+              </div>
+            </div>
+            <div class="case-detail">
+              <p data-i18n="case.pr_desc">
+              </p>
+            </div>
+          </div>
+          <div class="case-item reveal" tabindex="0">
+            <div class="case-header">
+              <div class="case-step">
+                05
+              </div>
+              <div class="case-title" data-i18n="case.review">
+              </div>
+              <div class="case-toggle">
+                +
+              </div>
+            </div>
+            <div class="case-detail">
+              <p data-i18n="case.review_desc">
+              </p>
+            </div>
+          </div>
+          <div class="case-item reveal" tabindex="0">
+            <div class="case-header">
+              <div class="case-step">
+                06
+              </div>
+              <div class="case-title" data-i18n="case.sonar">
+              </div>
+              <div class="case-toggle">
+                +
+              </div>
+            </div>
+            <div class="case-detail">
+              <p data-i18n="case.sonar_desc">
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- system-design -->
+    <section class="system-design" id="architecture">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag" data-i18n="arch.tag">
+            Architecture
+          </div>
+          <h2 class="section-title-main" data-i18n="arch.title">
+            System Architecture
+          </h2>
+          <p class="section-subtitle" data-i18n="arch.sub">
+            Production-oriented architecture across frontend, backend, database,
+            and AI automation workflows.
+          </p>
+        </div>
+
+        <div class="arch-showcase reveal">
+
+          <!-- LEFT: main architecture -->
+          <div class="arch-main-panel">
+            <div class="arch-panel-head">
+              <div>
+                <span class="arch-kicker" data-i18n="arch.flow.kicker">
+                  Fullstack Product Flow
+                </span>
+                <h3 data-i18n="arch.flow.title">
+                  Web Application Architecture
+                </h3>
+              </div>
+              <span class="arch-status" data-i18n="arch.flow.status">
+                Production-ready
+              </span>
+            </div>
+
+            <div class="arch-flow-v2">
+
+              <div class="arch-step">
+                <div class="arch-step-index">01</div>
+                <div class="arch-step-icon">🖥️</div>
+                <div class="arch-step-body">
+                  <h4 data-i18n="arch.frontend.title">Frontend Layer</h4>
+                  <p data-i18n="arch.frontend.desc">
+                    Angular dashboards, forms, RBAC screens, responsive UI and user workflows.
+                  </p>
+                  <div class="arch-chip-row">
+                    <span>Angular</span>
+                    <span>TypeScript</span>
+                    <span>UI/UX</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="arch-line"></div>
+
+              <div class="arch-step">
+                <div class="arch-step-index">02</div>
+                <div class="arch-step-icon">🔐</div>
+                <div class="arch-step-body">
+                  <h4 data-i18n="arch.api.title">API & Auth Layer</h4>
+                  <p data-i18n="arch.api.desc">
+                    Request validation, authentication, role-based access control and routing.
+                  </p>
+                  <div class="arch-chip-row">
+                    <span>REST API</span>
+                    <span>JWT</span>
+                    <span>RBAC</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="arch-line"></div>
+
+              <div class="arch-step">
+                <div class="arch-step-index">03</div>
+                <div class="arch-step-icon">⚙️</div>
+                <div class="arch-step-body">
+                  <h4 data-i18n="arch.backend.title">Backend Services</h4>
+                  <p data-i18n="arch.backend.desc">
+                    Business logic, automation services, integrations and domain workflows.
+                  </p>
+                  <div class="arch-chip-row">
+                    <span>Node.js</span>
+                    <span>Python</span>
+                    <span>Microservices</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="arch-line"></div>
+
+              <div class="arch-step">
+                <div class="arch-step-index">04</div>
+                <div class="arch-step-icon">🗄️</div>
+                <div class="arch-step-body">
+                  <h4 data-i18n="arch.data.title">Data Layer</h4>
+                  <p data-i18n="arch.data.desc">
+                    Users, roles, progress tracking, logs, reporting data and operational records.
+                  </p>
+                  <div class="arch-chip-row">
+                    <span>MongoDB</span>
+                    <span>SQL</span>
+                    <span>Data Models</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- RIGHT: AI extension -->
+          <div class="arch-ai-panel">
+            <div class="arch-ai-glow"></div>
+
+            <div class="arch-ai-head">
+              <span class="ai-live-dot"></span>
+              <span data-i18n="arch.ai.kicker">AI Automation Extension</span>
+            </div>
+
+            <h3 data-i18n="arch.ai.title">Logistics AI Workflow</h3>
+
+            <p class="arch-ai-desc" data-i18n="arch.ai.desc">
+              Extension modules for enterprise automation, computer vision,
+              RTSP camera processing and local LLM-assisted workflows.
+            </p>
+
+            <div class="ai-pipeline">
+
+              <div class="ai-pipe-item">
+                <span class="ai-pipe-icon">🎥</span>
+                <div>
+                  <strong data-i18n="arch.ai.rtsp.title">RTSP Camera Stream</strong>
+                  <p data-i18n="arch.ai.rtsp.desc">
+                    Capture frames from live camera sources.
+                  </p>
+                </div>
+              </div>
+
+              <div class="ai-pipe-arrow"></div>
+
+              <div class="ai-pipe-item">
+                <span class="ai-pipe-icon">👁️</span>
+                <div>
+                  <strong data-i18n="arch.ai.cv.title">Computer Vision</strong>
+                  <p data-i18n="arch.ai.cv.desc">
+                    YOLOv8 detection and license plate recognition.
+                  </p>
+                </div>
+              </div>
+
+              <div class="ai-pipe-arrow"></div>
+
+              <div class="ai-pipe-item">
+                <span class="ai-pipe-icon">🧠</span>
+                <div>
+                  <strong data-i18n="arch.ai.process.title">AI Processing</strong>
+                  <p data-i18n="arch.ai.process.desc">
+                    Ollama-assisted automation and workflow analysis.
+                  </p>
+                </div>
+              </div>
+
+              <div class="ai-pipe-arrow"></div>
+
+              <div class="ai-pipe-item">
+                <span class="ai-pipe-icon">📊</span>
+                <div>
+                  <strong data-i18n="arch.ai.dashboard.title">Angular Dashboard</strong>
+                  <p data-i18n="arch.ai.dashboard.desc">
+                    Display monitoring results, events and operational data.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="arch-ai-tags">
+              <span>YOLOv8</span>
+              <span>Ollama</span>
+              <span>RTSP</span>
+              <span>Node.js</span>
+              <span>Angular</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GITHUB -->
+    <section id="github">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag" data-i18n="github.tag">
+            Open Source
+          </div>
+
+          <h2 class="section-title-main" data-i18n="github.title">
+            My GitHub Projects
+          </h2>
+
+          <p class="section-subtitle" data-i18n="github.sub">
+            Real code from my repositories
+          </p>
+        </div>
+
+        <div class="github-toolbar reveal">
+          <div class="github-toolbar-left">
+            <span class="github-dot"></span>
+            <span data-i18n="github.toolbar">
+              Auto-synced from GitHub
+            </span>
+          </div>
+
+          <a
+            href="https://github.com/uncleyellow"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="github-profile-link"
+            data-i18n="github.profile"
+          >
+            View GitHub Profile ↗
+          </a>
+        </div>
+
+        <div class="github-grid loading" id="githubRepos">
+          <div class="github-skeleton"></div>
+          <div class="github-skeleton"></div>
+          <div class="github-skeleton"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag" data-i18n="about.tag">
+            About
+          </div>
+          <h2 class="section-title-main" data-i18n="about.title">
+            Who I am
+          </h2>
+          <p class="section-subtitle" data-i18n="about.sub">
+            A quick intro about me
+          </p>
+        </div>
+        <div class="about-grid">
+          <!-- ✅ AVATAR -->
+          <div class="about-avatar reveal">
+            <img src="./assets/img/avatar.jpg" alt="avatar" loading="lazy" />
+          </div>
+          <!-- ✅ TEXT -->
+          <div class="about-text reveal">
+            <p data-i18n="about.desc1">
+            </p>
+            <p data-i18n="about.desc2">
+            </p>
+            <p data-i18n="about.desc3">
+            </p>
+            <!-- ✅ PHONE -->
+            <div class="about-contact">
+              <a href="tel:+84985363602">
+                📞 +84 985363602
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- ✅ CAREER TIMELINE -->
+        <div class="about-timeline reveal">
+          <div class="timeline-line">
+          </div>
+          <div class="timeline-item2">
+            <div class="timeline-marker">
+              <span class="dot">
+              </span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <div class="timeline-year">
+                  2021
+                </div>
+                <span class="timeline-badge">
+                  Start
+                </span>
+              </div>
+              <h3 class="timeline-title" data-i18n="about.timeline.2021.title">
+                Started Professional Development
+              </h3>
+              <p class="timeline-text" data-i18n="about.timeline.2021.desc">
+                Began working as a frontend developer, focusing on Angular, AngularJS,
+                HTML/CSS, JavaScript, and enterprise UI development.
+              </p>
+              <div class="timeline-tags">
+                <span>
+                  Angular
+                </span>
+                <span>
+                  AngularJS
+                </span>
+                <span>
+                  JavaScript
+                </span>
+                <span>
+                  HTML/CSS
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item2">
+            <div class="timeline-marker">
+              <span class="dot">
+              </span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <div class="timeline-year">
+                  2021 — 2023
+                </div>
+                <span class="timeline-badge">
+                  Healthcare / Telecom
+                </span>
+              </div>
+              <h3 class="timeline-title" data-i18n="about.timeline.aratech.title">
+                Aratech — Frontend Developer
+              </h3>
+              <p class="timeline-text" data-i18n="about.timeline.aratech.desc">
+                Developed enterprise applications for healthcare and telecom domains,
+                including Hospital LIS systems and Viettel contract management platforms.
+                Worked on complex data workflows, role-based access, responsive UI, and
+                performance optimization.
+              </p>
+              <div class="timeline-tags">
+                <span>
+                  Angular
+                </span>
+                <span>
+                  AngularJS
+                </span>
+                <span>
+                  SQL
+                </span>
+                <span>
+                  Microservices
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item2">
+            <div class="timeline-marker">
+              <span class="dot">
+              </span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <div class="timeline-year">
+                  2021 — Present
+                </div>
+                <span class="timeline-badge">
+                  Freelance
+                </span>
+              </div>
+              <h3 class="timeline-title" data-i18n="about.timeline.freelance.title">
+                Freelance Fullstack Developer
+              </h3>
+              <p class="timeline-text" data-i18n="about.timeline.freelance.desc">
+                Delivered end-to-end freelance solutions using Angular, Python, React
+                Native, and third-party APIs. Built business automation tools, Meta Ads
+                integrations, AI/LLM-powered workflows, and a Japanese learning mobile
+                application.
+              </p>
+              <div class="timeline-tags">
+                <span>
+                  Angular
+                </span>
+                <span>
+                  Python
+                </span>
+                <span>
+                  React Native
+                </span>
+                <span>
+                  Meta API
+                </span>
+                <span>
+                  LLM
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item2">
+            <div class="timeline-marker">
+              <span class="dot">
+              </span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <div class="timeline-year">
+                  2024 — 2025
+                </div>
+                <span class="timeline-badge">
+                  Banking / Fintech
+                </span>
+              </div>
+              <h3 class="timeline-title" data-i18n="about.timeline.techcombank.title">
+                Techcombank — Frontend Developer
+              </h3>
+              <p class="timeline-text" data-i18n="about.timeline.techcombank.desc">
+                Built enterprise bidding and contract management systems for internal
+                banking operations. Implemented scalable Angular and NgRx architecture,
+                improved application performance, supported refactoring, and enhanced long-term
+                maintainability through code quality practices.
+              </p>
+              <div class="timeline-tags">
+                <span>
+                  Angular
+                </span>
+                <span>
+                  NgRx
+                </span>
+                <span>
+                  TypeScript
+                </span>
+                <span>
+                  REST API
+                </span>
+                <span>
+                  SonarQube
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item2 timeline-featured">
+            <div class="timeline-marker">
+              <span class="dot">
+              </span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <div class="timeline-year">
+                  2024 — 2025
+                </div>
+                <span class="timeline-badge">
+                  AI / Logistics
+                </span>
+              </div>
+              <h3 class="timeline-title" data-i18n="about.timeline.ratraco.title">
+                RATRACO — AI / Fullstack Developer
+              </h3>
+              <p class="timeline-text" data-i18n="about.timeline.ratraco.desc">
+                Applied AI to enterprise logistics operations, including container temperature
+                monitoring, RTSP camera processing, and license plate recognition. Built
+                Angular frontend modules and Node.js backend services, integrating YOLOv8
+                and Ollama to support automation workflows.
+              </p>
+              <div class="timeline-tags">
+                <span>
+                  Angular
+                </span>
+                <span>
+                  Node.js
+                </span>
+                <span>
+                  YOLOv8
+                </span>
+                <span>
+                  Ollama
+                </span>
+                <span>
+                  RTSP
+                </span>
+                <span>
+                  Computer Vision
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item2">
+            <div class="timeline-marker">
+              <span class="dot">
+              </span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <div class="timeline-year">
+                  2025 — Present
+                </div>
+                <span class="timeline-badge">
+                  Product Owner
+                </span>
+              </div>
+              <h3 class="timeline-title" data-i18n="about.timeline.driving.title">
+                Driving School Management System
+              </h3>
+              <p class="timeline-text" data-i18n="about.timeline.driving.desc">
+                Designed and built a fullstack production platform for driving school
+                operations. Implemented student management, lesson tracking, internal exams,
+                progress analytics, RBAC, deployment, and production maintenance independently.
+              </p>
+              <div class="timeline-tags">
+                <span>
+                  Angular
+                </span>
+                <span>
+                  Python
+                </span>
+                <span>
+                  Node.js
+                </span>
+                <span>
+                  REST API
+                </span>
+                <span>
+                  Vercel
+                </span>
+                <span>
+                  Fullstack
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item2">
+            <div class="timeline-marker">
+              <span class="dot">
+              </span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <div class="timeline-year">
+                  Jun 2025 — Present
+                </div>
+                <span class="timeline-badge">
+                  Aviation / International
+                </span>
+              </div>
+              <h3 class="timeline-title" data-i18n="about.timeline.smartosc.title">
+                SmartOSC — Cebu Pacific Air
+              </h3>
+              <p class="timeline-text" data-i18n="about.timeline.smartosc.desc">
+                Joined an international aviation project for Cebu Pacific Air. Focused
+                on enterprise Angular development, CMS migration, third-party API integration,
+                booking-related workflows, code review, and production-quality feature
+                delivery.
+              </p>
+              <div class="timeline-tags">
+                <span>
+                  Angular
+                </span>
+                <span>
+                  TypeScript
+                </span>
+                <span>
+                  CMS
+                </span>
+                <span>
+                  REST API
+                </span>
+                <span>
+                  Code Review
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- MORE -->
+    <section id="more">
+      <div class="container">
+        <div class="more-grid">
+          <div class="reveal">
+            <div class="section-header" style="margin-bottom:28px">
+              <div class="section-tag" data-i18n="cert.tag">
+                Credentials
+              </div>
+              <h2 class="section-title-main" style="font-size:28px" data-i18n="cert.title">
+                Certifications
+              </h2>
+            </div>
+            <div class="cert-list">
+              <!-- Official Certification: IELTS -->
+              <div class="cert-item cert-link cert-official">
+                <span class="cert-icon">
+                  🌐
+                </span>
+                <div class="cert-content">
+                  <div class="cert-name">
+                    IELTS ~6.5 (B2)
+                  </div>
+                  <div class="cert-year" data-i18n="cert1.sub">
+                    2023 · Professional working proficiency
+                  </div>
+                </div>
+              </div>
+              <!-- Official Certification: JLPT -->
+              <div href="#" target="_blank" rel="noopener noreferrer" class="cert-item cert-link cert-official">
+                <span class="cert-icon">
+                  🇯🇵
+                </span>
+                <div class="cert-content">
+                  <div class="cert-name">
+                    JLPT N5
+                  </div>
+                  <div class="cert-year" data-i18n="cert2.sub">
+                    2021 · Japanese Language Proficiency
+                  </div>
+                </div>
+              </div>
+              <!-- Education -->
+              <div href="#" target="_blank" rel="noopener noreferrer" class="cert-item cert-link cert-education">
+                <span class="cert-icon">
+                  🏫
+                </span>
+                <div class="cert-content">
+                  <div class="cert-name" data-i18n="cert3.branch">
+                    Đại học Thủy Lợi
+                  </div>
+                  <div class="cert-year" data-i18n="cert3.sub">
+                    2021 · Khoa công nghệ thông tin Việt Nhật
+                  </div>
+                </div>
+              </div>
+              <!-- Other Certifications Label -->
+              <div class="cert-group-title" data-i18n="cert.other.title">
+                Other Certifications
+              </div>
+              <!-- Other Certificates Folder -->
+              <a href="https://drive.google.com/drive/folders/1mBMXRXd6Cp9umB0EijapgYNqjZlGFwF7?usp=sharing"
+              target="_blank" rel="noopener noreferrer" class="cert-item cert-link cert-extra cert-folder">
+                <span class="cert-icon">
+                  📁
+                </span>
+                <div class="cert-content">
+                  <div class="cert-name" data-i18n="cert4.name">
+                    View Additional Certificates
+                  </div>
+                  <div class="cert-year" data-i18n="cert4.sub">
+                    Google Drive folder · Certificates collection
+                  </div>
+                </div>
+                <span class="cert-open">
+                  ↗
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="section-header" style="margin-bottom:28px">
+              <div class="section-tag" data-i18n="interest.tag">
+                Beyond Code
+              </div>
+              <h2 class="section-title-main" style="font-size:28px" data-i18n="interest.title">
+                Interests
+              </h2>
+            </div>
+            <div class="interest-grid">
+              <div class="interest-card">
+                <span class="interest-emoji">
+                  🏀
+                </span>
+                <div class="interest-label" data-i18n="int1">
+                  Basketball
+                </div>
+              </div>
+              <div class="interest-card">
+                <span class="interest-emoji">
+                  🎸
+                </span>
+                <div class="interest-label" data-i18n="int2">
+                  Guitar
+                </div>
+              </div>
+              <div class="interest-card">
+                <span class="interest-emoji">
+                  🎮
+                </span>
+                <div class="interest-label" data-i18n="int3">
+                  Gaming
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-wrap">
+          <div class="contact-glow reveal">
+            <div class="contact-label" data-i18n="contact.label">
+              Let's Work Together
+            </div>
+            <h2 class="contact-heading" data-i18n="contact.heading">
+              Ready to build something great?
+            </h2>
+            <p class="contact-sub" data-i18n="contact.sub">
+              Open to full-time roles, contracts, and interesting freelance projects.
+              Let's talk.
+            </p>
+            <a href="mailto:kiniemboquenjerry@gmail.com" class="contact-email">
+              📬 kiniemboquenjerry@gmail.com
+            </a>
+            <form
+              action="https://formsubmit.co/kiniemboquenjerry@gmail.com"
+              method="POST"
+              class="contact-form"
+              enctype="multipart/form-data"
+            contact message">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="false">
+
+              <div class="form-row">
+                <div class="input-group">
+                  <span class="input-icon">👤</span>
+                  <input
+                    type="text"
+                    name="name"
+                    id="contactName"
+                    required
+                    autocomplete="name"
+                  >
+                  <label for="contactName" data-i18n="contact.form.name">
+                    Your Name
+                  </label>
+                </div>
+
+                <div class="input-group">
+                  <span class="input-icon">📧</span>
+                  <input
+                    type="email"
+                    name="email"
+                    id="contactEmail"
+                    required
+                    autocomplete="email"
+                  >
+                  <label for="contactEmail" data-i18n="contact.form.email">
+                    Your Email
+                  </label>
+                </div>
+              </div>
+
+              <div class="input-group textarea-group">
+                <span class="input-icon">💬</span>
+                <textarea
+                  name="message"
+                  id="contactMessage"
+                  rows="5"
+                  required
+                ></textarea>
+                <label for="contactMessage" data-i18n="contact.form.message">
+                  Your Message
+                </label>
+              </div>
+
+              <div class="file-upload" id="fileUpload">
+                <input
+                  type="file"
+                  name="attachment"
+                  id="fileInput"
+                  accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
+                >
+
+                <label for="fileInput" class="file-upload-label" id="fileDropZone">
+                  <span class="file-icon">📎</span>
+
+                  <span class="file-copy">
+                    <strong data-i18n="contact.form.file.title">
+                      Attach a file
+                    </strong>
+                    <small data-i18n="contact.form.file.sub">
+                      PDF, DOC, DOCX, PNG, JPG up to 5MB
+                    </small>
+                  </span>
+
+                  <span class="file-action" data-i18n="contact.form.file.browse">
+                    Browse
+                  </span>
+                </label>
+
+                <div class="file-preview" id="filePreview" hidden>
+                  <div class="file-preview-left">
+                    <span class="file-preview-icon" id="filePreviewIcon">📄</span>
+                    <div>
+                      <div class="file-name" id="fileName">
+                        No file selected
+                      </div>
+                      <div class="file-size" id="fileSize">
+                        —
+                      </div>
+                    </div>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="file-remove"
+                    id="fileRemove"
+                    aria-label="Remove selected file"
+                  >
+                    ×
+                  </button>
+                </div>
+
+                <div class="file-error" id="fileError" hidden></div>
+              </div>
+
+              <button type="submit" class="btn-primary contact-submit">
+                <span data-i18n="contact.form.submit">
+                  Send Message
+                </span>
+                <span class="submit-icon">🚀</span>
+              </button>
+            </form>
+            <!-- ✅ DOWNLOAD CV -->
+            <a href="Khanh_CV.html" id="openCV" class="btn-primary contact-cv">
+              <span>
+                📄 View CV
+              </span>
+            </a>
+            <a href="./Duong Dinh Khanh — CV.pdf" download class="btn-secondary contact-cv-download">
+              ⬇️ Download CV
+            </a>
+            <div class="social-links">
+              <a href="https://github.com/uncleyellow" target="_blank" class="social-link"
+              title="GitHub">
+                💻
+              </a>
+              <a href="#" class="social-link" title="LinkedIn">
+                💼
+              </a>
+              <a href="#" class="social-link" title="Twitter / X">
+                🐦
+              </a>
+              <a href="#" class="social-link" title="CV Download">
+                📄
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <span>
+        ©
+        <span id="year">
+        </span>
+        Dương Đình Khánh
+      </span>
+      <span data-i18n="footer.built">
+        Built with
+        <span style="color:#ef4444">
+          ♥
+        </span>
+        — No frameworks, pure craft
+      </span>
+    </footer>
+    <!-- ✅ CV MODAL -->
+    <div id="cvModal" class="cv-modal">
+      <div class="cv-content">
+        <span class="cv-close">
+          &times;
+        </span>
+        <iframe src="./Duong Dinh Khanh — CV.pdf">
+        </iframe>
+      </div>
+    </div>
+    <script src="./main.js" type="module">
+    </script>
+    <script src="./intro-greeting.js">
+    </script>
+  </body>
+
 </html>
