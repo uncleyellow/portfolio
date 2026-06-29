@@ -1150,6 +1150,9 @@ to {
   background:var(--accent-dim);
   transition:background 0.2s,border-color 0.2s,transform 0.2s;
   margin-bottom:24px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-align: center
 }
 .contact-email:hover {
   background:rgba(14,165,233,0.18);
@@ -3064,4 +3067,7 @@ footer {
   opacity:1;
   pointer-events:auto;
   transition:opacity 0.9s ease;
+}
+.my-cv-profile{
+  padding-bottom: 10px;
 }
